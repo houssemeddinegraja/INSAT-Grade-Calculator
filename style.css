@@ -1,0 +1,124 @@
+header{
+	font-size: 40px;
+	text-align: center;
+	font-weight: bolder;
+	margin-top: 20px;
+}
+.header-row {
+	display: flex;
+	gap: 10px; 
+}
+
+.header-title {
+	display: inline-block;
+	width: 100px;
+	padding: 5px;
+	text-align: center;
+	font-weight: bold;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+h3{
+	text-align: center;
+	font-family: Arial;
+}
+hr{
+	width: 95%;
+	border: 1px solid black;
+}
+.start{
+	font-size:26px;
+	margin-left: 20px;;
+}
+
+legend{
+	font-size: 20px;
+	font-family:'Calibri';
+	font-weight: bold;
+}
+
+fieldset {
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid black;
+    width: 95%; 
+	max-width: 900px; 
+	text-align: center;
+}
+
+#showing {
+	margin-top:10px;
+	font-size: 18px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-align: center;
+}
+
+#StudyYear, #StudyField {
+	margin-right: 30px;
+	padding: 5px;
+	font-size: 16px;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr auto; 
+	/* fr 7asb fahmi ta5ou la9cha=fraction mel espace libre, 
+	1: la9cha bark, 2: la9chtin, 1fr 1fr 1fr: 3 colonnes de même taille 
+	1fr 2fr: colonne loula fixe, w zouz colonnet lo5rin houma li ya9smou li 93ad.*/
+    gap: 15px 20px;
+    align-items: center;
+    font-size: 20px;
+    text-align: left;
+}
+
+.subjects input[type="number"] {
+    width: 100px;
+    padding: 5px;
+    font-size: 16px;
+}
+.input-group {
+    display: flex;
+    gap: 10px; 
+    justify-content: flex-start; 
+    flex-wrap: wrap;
+}
+p {
+	font-size: 18px;
+	margin-left: 20px;
+}
+.load{
+	font-size: 18px;
+	padding: 10px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+.subjects input[type="number"]{
+	width: 100px;
+	padding: 5px;
+	font-size: 16px;
+}
+.matiere {
+	font-family:monospace;
+}
+.col1, .col2, .col3 {
+	display: inline-block;
+	width: 20px;
+	font-weight: bold;
+	text-align: center;
+	margin-left: 150px;
+}
+.bigfield {
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid black;
+    width: 95%; 
+	max-width: 900px; 
+}
