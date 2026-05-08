@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<title>Landing</title>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<script src="selection.js" defer></script>
+	</head><body>
+		<header>INSAT Grade Calculator</header>
+		<h3><i>Predict your average based on aquired or estimated grades</i></h3>
+		<hr class="hr">
+		<fieldset>
+			<legend>Start by choosing your major:</legend>
+			Study Year: <select name="StudyYear" id="StudyYear">
+				<option value="none">Select Year First</option>
+                <option value="1">1st</option>
+				<option value="2">2nd</option>
+				<option value="3">3rd</option>
+				<option value="4">4th</option>
+				<option value="5">5th</option>
+			</select>
+			Study Field: <select name="Study Field" id="StudyField">
+				<option value="none">Select Year First</option>
+			</select>
+			<button class="load" onclick="load()">Load Subjects</button>
+		</fieldset>
+    </body>
+</html>
