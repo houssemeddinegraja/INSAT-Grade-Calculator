@@ -1,27 +1,53 @@
 <!DOCTYPE html>
-<html>
-	<title>Landing</title>
-	<head>
-		<link rel="stylesheet" href="style.css">
-		<script src="selection.js" defer></script>
-	</head><body>
-		<header>INSAT Grade Calculator</header>
-		<h3><i>Predict your average based on aquired or estimated grades</i></h3>
-		<hr class="hr">
-		<fieldset>
-			<legend>Start by choosing your major:</legend>
-			Study Year: <select name="StudyYear" id="StudyYear">
-				<option value="none">Select Year First</option>
-                <option value="1">1st</option>
-				<option value="2">2nd</option>
-				<option value="3">3rd</option>
-				<option value="4">4th</option>
-				<option value="5">5th</option>
-			</select>
-			Study Field: <select name="Study Field" id="StudyField">
-				<option value="none">Select Year First</option>
-			</select>
-			<button class="load" onclick="load()">Load Subjects</button>
-		</fieldset>
-    </body>
+<html lang="en">
+<title>INSAT Grade Calculator</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="selection.js" defer></script>
+</head>
+<body>
+    <div class="app-container">
+        <header class="main-header">
+            <div class="header-icon">🎓</div>
+            <h1>INSAT Grade Calculator</h1>
+            <p class="header-subtitle">Predict your average based on acquired or estimated grades</p>
+        </header>
+
+        <div class="selector-card">
+            <div class="selector-header">
+                <span class="selector-icon">📋</span>
+                <h2>Choose Your Major</h2>
+            </div>
+            <div class="selector-body">
+                <div class="select-group">
+                    <label for="StudyYear">Study Year</label>
+                    <select name="StudyYear" id="StudyYear">
+                        <option value="none">Select Year First</option>
+                        <option value="1">1st Year</option>
+                        <option value="2">2nd Year</option>
+                        <option value="3">3rd Year</option>
+                        <option value="4">4th Year</option>
+                        <option value="5">5th Year</option>
+                    </select>
+                </div>
+                <div class="select-group">
+                    <label for="StudyField">Study Field</label>
+                    <select name="Study Field" id="StudyField">
+                        <option value="none">Select Year First</option>
+                    </select>
+                </div>
+                <button class="btn-load" onclick="load()">
+                    <span>Load Subjects</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+        </div>
+
+        <footer class="app-footer">
+            <p>Built with ❤️ for INSAT students</p>
+        </footer>
+    </div>
+</body>
 </html>
