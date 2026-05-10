@@ -1,124 +1,227 @@
-header{
-	font-size: 40px;
-	text-align: center;
-	font-weight: bolder;
-	margin-top: 20px;
-}
-.header-row {
-	display: flex;
-	gap: 10px; 
+/* Importation d'une police moderne */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #C8102E; /* Rouge type INSAT */
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --text-main: #2c3e50;
+    --text-muted: #7f8c8d;
+    --border-radius: 12px;
+    --shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 
-.header-title {
-	display: inline-block;
-	width: 100px;
-	padding: 5px;
-	text-align: center;
-	font-weight: bold;
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
 }
 
-h3{
-	text-align: center;
-	font-family: Arial;
-}
-hr{
-	width: 95%;
-	border: 1px solid black;
-}
-.start{
-	font-size:26px;
-	margin-left: 20px;;
+header {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
-legend{
-	font-size: 20px;
-	font-family:'Calibri';
-	font-weight: bold;
+h3 {
+    text-align: center;
+    color: var(--text-muted);
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* On cache l'ancien trait noir basique pour un look plus propre */
+hr.hr {
+    display: none; 
 }
 
 fieldset {
-    margin: 20px auto;
-    padding: 20px;
-    border: 2px solid black;
-    width: 95%; 
-	max-width: 900px; 
-	text-align: center;
+    background: var(--card-bg);
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin: 15px auto;
+    padding: 30px;
+    width: 100%; 
+    max-width: 900px; 
+    transition: transform 0.2s ease;
 }
 
-#showing {
-	margin-top:10px;
-	font-size: 18px;
-	font-family:Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	text-align: center;
+fieldset:hover {
+    transform: translateY(-2px);
+}
+
+legend {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--card-bg);
+    background: var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(200, 16, 46, 0.3);
 }
 
 #StudyYear, #StudyField {
-	margin-right: 30px;
-	padding: 5px;
-	font-size: 16px;
-	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    outline: none;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    font-weight: 500;
 }
 
+#StudyYear:focus, #StudyField:focus {
+    border-color: var(--primary-color);
+}
 
+.load {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.1s;
+    box-shadow: 0 4px 10px rgba(200, 16, 46, 0.2);
+}
+
+.load:hover {
+    background: #a00d25;
+}
+
+.load:active {
+    transform: scale(0.98);
+}
+
+#showing {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-main);
+    text-align: center;
+    background: var(--card-bg);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+/* Structure de la grille des matières */
 .grid-container {
     display: grid;
     grid-template-columns: 1fr auto; 
-	/* fr 7asb fahmi ta5ou la9cha=fraction mel espace libre, 
-	1: la9cha bark, 2: la9chtin, 1fr 1fr 1fr: 3 colonnes de même taille 
-	1fr 2fr: colonne loula fixe, w zouz colonnet lo5rin houma li ya9smou li 93ad.*/
     gap: 15px 20px;
     align-items: center;
-    font-size: 20px;
     text-align: left;
 }
 
-.subjects input[type="number"] {
-    width: 100px;
-    padding: 5px;
-    font-size: 16px;
+label {
+    font-weight: 600;
+    color: var(--text-main);
+    font-size: 15px;
 }
+
+.header-row {
+    display: flex;
+    gap: 10px; 
+    justify-content: flex-start;
+}
+
+.header-title {
+    display: inline-block;
+    width: 90px; /* Aligné avec la largeur des inputs */
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
 .input-group {
     display: flex;
     gap: 10px; 
     justify-content: flex-start; 
-    flex-wrap: wrap;
 }
-p {
-	font-size: 18px;
-	margin-left: 20px;
+
+.subjects input[type="number"] {
+    width: 90px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+    background: #fdfdfd;
+    transition: all 0.2s ease;
+    font-weight: 600;
+    color: var(--primary-color);
 }
-.load{
-	font-size: 18px;
-	padding: 10px;
-	font-family:Arial, Helvetica, sans-serif;
-	font-weight: bold;
+
+.subjects input[type="number"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(200, 16, 46, 0.15);
+    background: #fff;
 }
-.subjects input[type="number"]{
-	width: 100px;
-	padding: 5px;
-	font-size: 16px;
+
+/* Masquer les flèches des inputs number pour un look plus propre */
+.subjects input[type="number"]::-webkit-outer-spin-button,
+.subjects input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
-.matiere {
-	font-family:monospace;
+.subjects input[type="number"] {
+    -moz-appearance: textfield;
 }
-.col1, .col2, .col3 {
-	display: inline-block;
-	width: 20px;
-	font-weight: bold;
-	text-align: center;
-	margin-left: 150px;
+
+/* Zone d'affichage des moyennes */
+#average, #average2, #year-average {
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
+
 .bigfield {
-    margin: 20px auto;
-    padding: 20px;
-    border: 2px solid black;
-    width: 95%; 
-	max-width: 900px; 
+    background: linear-gradient(135deg, #ffffff 0%, #f4f7f6 100%);
+    border: 2px solid var(--primary-color);
+}
+
+/* Adaptation pour les téléphones portables */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+    
+    .header-row {
+        display: none; /* On cache les en-têtes DS/Examen sur mobile pour gagner de la place */
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+    }
+
+    /* Ajustement des inputs margin-left (ex: C++ sans DS) sur mobile */
+    .subjects input[type="number"][style*="margin-left"] {
+        margin-left: 0 !important;
+    }
 }
