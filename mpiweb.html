@@ -1,197 +1,204 @@
 <!DOCTYPE html>
-<html>
-	<title>Momentary</title>
-	<head>
-		<link rel="stylesheet" href="style.css">
-		<script src="selection.js" defer></script>
-		<script src="mpiweb.js" defer></script>
-	</head><body>
-		<header>INSAT Grade Calculator</header>
-		<h3><i>Predict your average based on aquired or estimated grades</i></h3>
-		<hr class="hr">
-		<fieldset>
-			<legend>Start by choosing your major:</legend>
-			Study Year: <select name="Study Year" id="StudyYear" onclick="updateSelection()">
-				<option value="none">Select Year First</option>
-				<option value="1">1st</option>
-				<option value="2">2nd</option>
-				<option value="3">3rd</option>
-				<option value="4">4th</option>
-				<option value="5">5th</option>
-			</select>
-			Study Field: <select name="Study Field" id="StudyField">
-				<option value="none">Select Year First</option>
-			</select>
-			<button class="load" onclick="load()">Load Subjects</button>
-		</fieldset>
-		<div id="showing">Currently showing: MPI</div>
-		<fieldset class="subjects">
-            <legend>Semester 1 :</legend>
-            <div class="grid-container">
-				<div class="grid-container">
-    
-    			<div></div> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MPI – INSAT Grade Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="selection.js" defer></script>
+    <script src="mpiweb.js" defer></script>
+</head>
+<body>
+    <div class="app-container">
+        <header class="main-header">
+            <div class="header-icon">📊</div>
+            <h1>INSAT Grade Calculator</h1>
+            <p class="header-subtitle">Predict your average based on acquired or estimated grades</p>
+        </header>
 
-				<div class="header-row">
-					<span class="header-title">DS</span>
-					<span class="header-title">Examen</span>
-					<span class="header-title">TP</span>
-				</div>
-                <label>Analyse I:</label>
-				<div class="input-group">
-                <input type="number" name="AnalyseDS" class="matiere" min="0" max="20" step="0.25" >
-				<input type="number" name="AnalyseEx" class="matiere" min="0" max="20" step="0.25" >
-				</div>
-				<label>Algèbre I:</label>
-				<div class="input-group">
-                <input type="number" name="AlgebreDS" class="matiere" min="0" max="20" step="0.25" >
-				<input type="number" name="AlgebreEx" class="matiere" min="0" max="20" step="0.25" >
-				</div>
-                <label>Algorithmique et Structures de Données I:</label>
-				<div class="input-group">
-                <input type="number" name="Algo I DS" class="matiere" min="0" max="20" step="0.25" >
-				<input type="number" name="Algo I Ex" class="matiere" min="0" max="20" step="0.25" >
-				</div>
-				<label>Anglais:</label>
-				<div class="input-group">
-				<input type="number" name="AnglaisDS" class="matiere" min="0" max="20" step="0.25" >
-				<input type="number" name="AnglaisEx" class="matiere" min="0" max="20" step="0.25" >
-				</div>
-				<label>Circuits Electriques:</label>
-				<div class="input-group">
-				<input type="number" name="CircuitsDS" class="matiere" min="0" max="20" step="0.25" >
-				<input type="number" name="CircuitsEx" class="matiere" min="0" max="20" step="0.25" >
-				<input type="number" name="CircuitsTP" class="matiere" min="0" max="20" step="0.25" >
-			</div>
-				
-				<label>Droit:</label>
-				<div class="input-group">
-				<input type="number" name="DroitDS" class="matiere" min="0" max="20" step="0.25" >
-				<input type="number" name="DroitEx" class="matiere" min="0" max="20" step="0.25" >
-				</div>
+        <div class="selector-card">
+            <div class="selector-header">
+                <span class="selector-icon">🔄</span>
+                <h2>Change Major</h2>
+            </div>
+            <div class="selector-body">
+                <div class="select-group">
+                    <label for="StudyYear">Study Year</label>
+                    <select name="Study Year" id="StudyYear" onchange="updateSelection()">
+                        <option value="none">Select Year First</option>
+                        <option value="1" selected>1st</option>
+                        <option value="2">2nd</option>
+                        <option value="3">3rd</option>
+                        <option value="4">4th</option>
+                        <option value="5">5th</option>
+                    </select>
+                </div>
+                <div class="select-group">
+                    <label for="StudyField">Study Field</label>
+                    <select name="Study Field" id="StudyField">
+                        <option value="none">Select Field</option>
+                        <option value="MPI" selected>MPI</option>
+                        <option value="CBA">CBA</option>
+                    </select>
+                </div>
+                <button class="btn-load" onclick="load()">
+                    <span>Load</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+        </div>
 
-				<label>Electrostatique:</label>
-				<div class="input-group">
-				<input type="number" name="ElectrostatiqueDS" class="matiere" min="0" max="20" step="0.25" >
-				<input type="number" name="ElectrostatiqueEx" class="matiere" min="0" max="20" step="0.25" >
-				<input type="number" name="ElectrostatiqueTP" class="matiere" min="0" max="20" step="0.25" >
-				</div>
+        <div id="showing">📌 Currently showing: MPI</div>
 
-				<label>Français:</label>
-				<div class="input-group">
-				<input type="number" name="FrançaisDS" class="matiere" min="0" max="20" step="0.25" >
-				<input type="number" name="FrançaisEx" class="matiere" min="0" max="20" step="0.25" >
-				</div>
+        <!-- Semester 1 -->
+        <div class="semester-card">
+            <h2>📘 Semester 1</h2>
+            <div class="grade-grid">
+                <div class="grade-header"></div>
+                <div class="grade-header">DS</div>
+                <div class="grade-header">Examen</div>
+                <div class="grade-header">TP</div>
 
-				<label>Mécanique:</label>
-				<div class="input-group">
-				<input type="number" name="MécaniqueDS" class="matiere" min="0" max="20" step="0.25" >
-				<input type="number" name="MécaniqueEx" class="matiere" min="0" max="20" step="0.25" >
-				</div>
+                <span class="subject-label">Analyse I</span>
+                <input type="number" name="AnalyseDS" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="AnalyseEx" class="matiere" min="0" max="20" step="0.25">
+                <div class="empty-cell"></div>
 
-				<label>Optique:</label>
-				<div class="input-group">
-				<input type="number" name="OptiqueDS" class="matiere" min="0" max="20" step="0.25" >
-				<input type="number" name="OptiqueEx" class="matiere" min="0" max="20" step="0.25" >
-				<input type="number" name="OptiqueTP" class="matiere" min="0" max="20" step="0.25" >
-				</div>
+                <span class="subject-label">Algèbre I</span>
+                <input type="number" name="AlgebreDS" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="AlgebreEx" class="matiere" min="0" max="20" step="0.25">
+                <div class="empty-cell"></div>
 
-				<label>Programmation I:</label>
-				
-				<div class="input-group">
-				<input type="number" name="ProgrammationEx" class="matiere" min="0" max="20" step="0.25"  style="margin-left: 122.5px;">
-				<input type="number" name="ProgrammationTP" class="matiere" min="0" max="20" step="0.25" >
-				</div>
-            </fieldset>
-			<fieldset style="margin-top: 20px;">
-				<legend><i>With these grades, you shall obtain an average of:</i></legend>
-				<div style="text-align: center; font-size: 32px; font-weight: bold; margin-bottom: 0; font-family:monospace" id="average">0.00</div>
-			</fieldset>
-			<fieldset class="subjects">
-            <legend>Semester 2 :</legend>
-            <div class="grid-container">
-				<div class="grid-container">
-    
-    			<div></div> 
+                <span class="subject-label">Algorithmique et Structures de Données I</span>
+                <input type="number" name="Algo I DS" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="Algo I Ex" class="matiere" min="0" max="20" step="0.25">
+                <div class="empty-cell"></div>
 
-				<div class="header-row">
-					<span class="header-title">DS</span>
-					<span class="header-title">Examen</span>
-					<span class="header-title">TP</span>
-				</div>
-                <label>Analyse II:</label>
-				<div class="input-group">
-                <input type="number" name="Analyse2DS" class="matiere" min="0" max="20" step="0.25" >
-				<input type="number" name="Analyse2Ex" class="matiere" min="0" max="20" step="0.25" >
-				</div>
-				<label>Algèbre II:</label>
-				<div class="input-group">
-                <input type="number" name="Algebre2DS" class="matiere" min="0" max="20" step="0.25" >
-				<input type="number" name="Algebre2Ex" class="matiere" min="0" max="20" step="0.25" >
-				</div>
-                <label>Algorithmique et Structures de Données II:</label>
-				<div class="input-group">
-                <input type="number" name="Algo II DS" class="matiere" min="0" max="20" step="0.25" >
-				<input type="number" name="Algo II Ex" class="matiere" min="0" max="20" step="0.25" >
-				</div>
-				<label>Anglais:</label>
-				<div class="input-group">
-				<input type="number" name="Anglais2DS" class="matiere" min="0" max="20" step="0.25" >
-				<input type="number" name="Anglais2Ex" class="matiere" min="0" max="20" step="0.25" >
-				</div>
-				<label>Economie:</label>
-				<div class="input-group">
-				<input type="number" name="EconomieDS" class="matiere" min="0" max="20" step="0.25" >
-				<input type="number" name="EconomieEx" class="matiere" min="0" max="20" step="0.25" >
-			</div>
-				
-				<label>Electromagnétisme:</label>
-				<div class="input-group">
-				<input type="number" name="ElectromagnétismeDS" class="matiere" min="0" max="20" step="0.25" >
-				<input type="number" name="ElectromagnétismeEx" class="matiere" min="0" max="20" step="0.25" >
-				</div>
+                <span class="subject-label">Anglais</span>
+                <input type="number" name="AnglaisDS" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="AnglaisEx" class="matiere" min="0" max="20" step="0.25">
+                <div class="empty-cell"></div>
 
-				<label>Electronique:</label>
-				<div class="input-group">
-				<input type="number" name="ElectroniqueDS" class="matiere" min="0" max="20" step="0.25" >
-				<input type="number" name="ElectroniqueEx" class="matiere" min="0" max="20" step="0.25" >
-				<input type="number" name="ElectroniqueTP" class="matiere" min="0" max="20" step="0.25" >
-				</div>
+                <span class="subject-label">Circuits Electriques</span>
+                <input type="number" name="CircuitsDS" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="CircuitsEx" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="CircuitsTP" class="matiere" min="0" max="20" step="0.25">
 
-				<label>Français:</label>
-				<div class="input-group">
-				<input type="number" name="Français2DS" class="matiere" min="0" max="20" step="0.25" >
-				<input type="number" name="Français2Ex" class="matiere" min="0" max="20" step="0.25" >
-				</div>
+                <span class="subject-label">Droit</span>
+                <input type="number" name="DroitDS" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="DroitEx" class="matiere" min="0" max="20" step="0.25">
+                <div class="empty-cell"></div>
 
-				<label>Systèmes Logiques:</label>
-				<div class="input-group">
-				<input type="number" name="Systèmes LogiquesDS" class="matiere" min="0" max="20" step="0.25" >
-				<input type="number" name="Systèmes LogiquesEx" class="matiere" min="0" max="20" step="0.25" >
-				<input type="number" name="Systèmes LogiquesTP" class="matiere" min="0" max="20" step="0.25" >
-				</div>
+                <span class="subject-label">Electrostatique</span>
+                <input type="number" name="ElectrostatiqueDS" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="ElectrostatiqueEx" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="ElectrostatiqueTP" class="matiere" min="0" max="20" step="0.25">
 
-				<label>Thermodynamique:</label>
-				<div class="input-group">
-				<input type="number" name="ThermodynamiqueDS" class="matiere" min="0" max="20" step="0.25" >
-				<input type="number" name="ThermodynamiqueEx" class="matiere" min="0" max="20" step="0.25" >
-				<input type="number" name="ThermodynamiqueTP" class="matiere" min="0" max="20" step="0.25" >
-				</div>
+                <span class="subject-label">Français</span>
+                <input type="number" name="FrançaisDS" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="FrançaisEx" class="matiere" min="0" max="20" step="0.25">
+                <div class="empty-cell"></div>
 
-				<label>Programmation II:</label>
-				
-				<div class="input-group">
-				<input type="number" name="Programmation2Ex" class="matiere" min="0" max="20" step="0.25"  style="margin-left: 122.5px;">
-				<input type="number" name="Programmation2TP" class="matiere" min="0" max="20" step="0.25" >
-				</div>
-            </fieldset>
-			<fieldset style="margin-top: 20px;">
-				<legend><i>With these grades, you shall obtain an average of:</i></legend>
-				<div style="text-align: center; font-size: 32px; font-weight: bold; margin-bottom: 0; font-family:monospace" id="average2">0.00</div>
-			</fieldset>
-			<fieldset class="bigfield">
-			<legend><i>And with these grades, you shall obtain an average for the year, of:</i></legend>
-			<div style="text-align: center; font-size: 32px; font-weight: bold; margin-bottom: 0; font-family:monospace; font-size:36px;" id="year-average">0.00</div>
-			</fieldset>
-	</body>
+                <span class="subject-label">Mécanique</span>
+                <input type="number" name="MécaniqueDS" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="MécaniqueEx" class="matiere" min="0" max="20" step="0.25">
+                <div class="empty-cell"></div>
+
+                <span class="subject-label">Optique</span>
+                <input type="number" name="OptiqueDS" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="OptiqueEx" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="OptiqueTP" class="matiere" min="0" max="20" step="0.25">
+
+                <span class="subject-label">Programmation I</span>
+                <div class="empty-cell"></div>
+                <input type="number" name="ProgrammationEx" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="ProgrammationTP" class="matiere" min="0" max="20" step="0.25">
+            </div>
+        </div>
+
+        <div class="average-card">
+            <div class="average-label">Semester 1 Average</div>
+            <div class="average-value" id="average">0.00</div>
+        </div>
+
+        <!-- Semester 2 -->
+        <div class="semester-card">
+            <h2>📗 Semester 2</h2>
+            <div class="grade-grid">
+                <div class="grade-header"></div>
+                <div class="grade-header">DS</div>
+                <div class="grade-header">Examen</div>
+                <div class="grade-header">TP</div>
+
+                <span class="subject-label">Analyse II</span>
+                <input type="number" name="Analyse2DS" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="Analyse2Ex" class="matiere" min="0" max="20" step="0.25">
+                <div class="empty-cell"></div>
+
+                <span class="subject-label">Algèbre II</span>
+                <input type="number" name="Algebre2DS" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="Algebre2Ex" class="matiere" min="0" max="20" step="0.25">
+                <div class="empty-cell"></div>
+
+                <span class="subject-label">Algorithmique et Structures de Données II</span>
+                <input type="number" name="Algo II DS" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="Algo II Ex" class="matiere" min="0" max="20" step="0.25">
+                <div class="empty-cell"></div>
+
+                <span class="subject-label">Anglais</span>
+                <input type="number" name="Anglais2DS" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="Anglais2Ex" class="matiere" min="0" max="20" step="0.25">
+                <div class="empty-cell"></div>
+
+                <span class="subject-label">Economie</span>
+                <input type="number" name="EconomieDS" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="EconomieEx" class="matiere" min="0" max="20" step="0.25">
+                <div class="empty-cell"></div>
+
+                <span class="subject-label">Electromagnétisme</span>
+                <input type="number" name="ElectromagnétismeDS" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="ElectromagnétismeEx" class="matiere" min="0" max="20" step="0.25">
+                <div class="empty-cell"></div>
+
+                <span class="subject-label">Electronique</span>
+                <input type="number" name="ElectroniqueDS" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="ElectroniqueEx" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="ElectroniqueTP" class="matiere" min="0" max="20" step="0.25">
+
+                <span class="subject-label">Français</span>
+                <input type="number" name="Français2DS" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="Français2Ex" class="matiere" min="0" max="20" step="0.25">
+                <div class="empty-cell"></div>
+
+                <span class="subject-label">Systèmes Logiques</span>
+                <input type="number" name="Systèmes LogiquesDS" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="Systèmes LogiquesEx" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="Systèmes LogiquesTP" class="matiere" min="0" max="20" step="0.25">
+
+                <span class="subject-label">Thermodynamique</span>
+                <input type="number" name="ThermodynamiqueDS" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="ThermodynamiqueEx" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="ThermodynamiqueTP" class="matiere" min="0" max="20" step="0.25">
+
+                <span class="subject-label">Programmation II</span>
+                <div class="empty-cell"></div>
+                <input type="number" name="Programmation2Ex" class="matiere" min="0" max="20" step="0.25">
+                <input type="number" name="Programmation2TP" class="matiere" min="0" max="20" step="0.25">
+            </div>
+        </div>
+
+        <div class="average-card">
+            <div class="average-label">Semester 2 Average</div>
+            <div class="average-value" id="average2">0.00</div>
+        </div>
+
+        <div class="year-average">
+            <div class="average-label">Year Average</div>
+            <div class="average-value" id="year-average">0.00</div>
+        </div>
+
+        <footer class="app-footer">
+            <p>Built with ❤️ for INSAT students</p>
+        </footer>
+    </div>
+</body>
 </html>
