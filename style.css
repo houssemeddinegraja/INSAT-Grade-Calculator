@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family: sans-serif;
   background: linear-gradient(135deg, #f0f4ff 0%, #e9eff7 100%);
   min-height: 100vh;
   display: flex;
