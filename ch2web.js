@@ -1,27 +1,28 @@
 const sem1Config = [
-    {coeff: 3,   ds: "MathsDS", ex: "MathsEx", tp: null},                     // no TP
-    {coeff: 4,   ds: "TechChimDS", ex: "TechChimEx", tp: "TechChimTP"},       // has TP
-    {coeff: 4,   ds: "SepChromDS", ex: "SepChromEx", tp: "SepChromTP"},       // has TP
-    {coeff: 4,   ds: "SpectroDS", ex: "SpectroEx", tp: "SpectroTP"},          // has TP
-    {coeff: 4,   ds: "CinetiqueDS", ex: "CinetiqueEx", tp: "CinetiqueTP"},    // has TP
-    {coeff: 4,   ds: "EquilibreDS", ex: "EquilibreEx", tp: "EquilibreTP"},    // has TP
-    {coeff: 4,   ds: "SynthOrgDS", ex: "SynthOrgEx", tp: "SynthOrgTP"},       // has TP
+    {coeff: 3,   ds: "MathsDS", ex: "MathsEx", tp: null},
+    {coeff: 4,   ds: "TechChimDS", ex: "TechChimEx", tp: "TechChimTP"},
+    {coeff: 4,   ds: "SepChromDS", ex: "SepChromEx", tp: "SepChromTP"},
+    {coeff: 4,   ds: "SpectroDS", ex: "SpectroEx", tp: "SpectroTP"},
+    {coeff: 4,   ds: "CinetiqueDS", ex: "CinetiqueEx", tp: "CinetiqueTP"},
+    {coeff: 4,   ds: "EquilibreDS", ex: "EquilibreEx", tp: "EquilibreTP"},
+    {coeff: 4,   ds: "SynthOrgDS", ex: "SynthOrgEx", tp: "SynthOrgTP"},
     {coeff: 1.5, ds: "AnglaisDS", ex: "AnglaisEx", tp: null},
     {coeff: 1.5, ds: "GestionDS", ex: "GestionEx", tp: null}
 ];
 
 const sem2Config = [
-    {coeff: 4,   ds: "ThermoDS", ex: "ThermoEx", tp: "ThermoTP"},             // has TP
-    {coeff: 4,   ds: "MecaFluDS", ex: "MecaFluEx", tp: "MecaFluTP"},          // has TP
-    {coeff: 4,   ds: "EqElectroDS", ex: "EqElectroEx", tp: "EqElectroTP"},    // has TP
-    {coeff: 4.5, ds: "CinElectroDS", ex: "CinElectroEx", tp: "CinElectroTP"}, // has TP
-    {coeff: 4.5, ds: "ProdNatDS", ex: "ProdNatEx", tp: "ProdNatTP"},          // has TP
-    {coeff: 4,   ds: null, ex: "PhysicoAnaEx", tp: "PhysicoAnaTP"},           // NO DS (TP+Exam only)
+    {coeff: 4,   ds: "ThermoDS", ex: "ThermoEx", tp: "ThermoTP"},
+    {coeff: 4,   ds: "MecaFluDS", ex: "MecaFluEx", tp: "MecaFluTP"},
+    {coeff: 4,   ds: "EqElectroDS", ex: "EqElectroEx", tp: "EqElectroTP"},
+    {coeff: 4.5, ds: "CinElectroDS", ex: "CinElectroEx", tp: "CinElectroTP"},
+    {coeff: 4.5, ds: "ProdNatDS", ex: "ProdNatEx", tp: "ProdNatTP"},
+    {coeff: 4,   ds: null, ex: "PhysicoAnaEx", tp: "PhysicoAnaTP"},   // No DS
     {coeff: 1.5, ds: "Anglais2DS", ex: "Anglais2Ex", tp: null},
     {coeff: 1.5, ds: "Français2DS", ex: "Français2Ex", tp: null},
     {coeff: 1,   ds: "DroitDS", ex: "DroitEx", tp: null},
     {coeff: 1,   ds: "ComptaDS", ex: "ComptaEx", tp: null}
 ];
+
 const recupererInput = (inputName) => {
     if (inputName === null || inputName === undefined) return 0;
     const input = document.querySelector(`input[name='${inputName}']`);
