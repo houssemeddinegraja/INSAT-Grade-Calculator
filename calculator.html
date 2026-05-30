@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INSAT Grade Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="selection.js"  defer></script>
+  <script src="data.js"       defer></script>
+  <script src="calculator.js" defer></script>
+</head>
+<body>
+<div class="app-container">
+
+  <header class="main-header">
+    <div class="header-icon">📊</div>
+    <h1>INSAT Grade Calculator</h1>
+    <p class="header-subtitle">Predict your average based on acquired or estimated grades</p>
+  </header>
+
+  <!-- Selector card -->
+  <div class="selector-card">
+    <div class="selector-header">
+      <span class="selector-icon">🔄</span>
+      <h2>Change Major</h2>
+    </div>
+    <div class="selector-body">
+      <div class="select-group">
+        <label for="StudyYear">Study Year</label>
+        <select id="StudyYear">
+          <option value="none">Select Year First</option>
+          <option value="1">1st</option>
+          <option value="2">2nd</option>
+          <option value="3">3rd</option>
+          <option value="4">4th</option>
+          <option value="5">5th</option>
+        </select>
+      </div>
+      <div class="select-group">
+        <label for="StudyField">Study Field</label>
+        <select id="StudyField">
+          <option value="none">Select Year First</option>
+        </select>
+      </div>
+      <button class="btn-load" onclick="load()">
+        <span>Load</span>
+        <span class="btn-arrow">→</span>
+      </button>
+    </div>
+  </div>
+
+  <div id="showing">📌 Loading…</div>
+
+  <!-- Semesters injected here by calculator.js -->
+  <div id="semesters-container"></div>
+
+  <footer class="app-footer">
+    <p>Built with ❤️ for INSAT students</p>
+  </footer>
+
+</div>
+</body>
+</html>

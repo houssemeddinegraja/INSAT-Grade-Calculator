@@ -1,0 +1,270 @@
+const PROGRAMS = {
+
+  // ─── YEAR 1 ──────────────────────────────────────────────────────────────
+
+  'MPI': {
+    label: 'MPI', year: '1', field: 'MPI',
+    semesters: [
+      { label: 'Semester 1', subjects: [
+        { label: 'Analyse I',                              coeff: 3,   ds: 'AnalyseDS',            ex: 'AnalyseEx',            tp: null },
+        { label: 'Algèbre I',                              coeff: 3,   ds: 'AlgebreDS',             ex: 'AlgebreEx',            tp: null },
+        { label: 'Algorithmique et Structures de Données I', coeff: 3, ds: 'Algo I DS',             ex: 'Algo I Ex',            tp: null },
+        { label: 'Anglais',                                coeff: 1.5, ds: 'AnglaisDS',             ex: 'AnglaisEx',            tp: null },
+        { label: 'Circuits Electriques',                   coeff: 3.5, ds: 'CircuitsDS',            ex: 'CircuitsEx',           tp: 'CircuitsTP' },
+        { label: 'Droit',                                  coeff: 1.5, ds: 'DroitDS',               ex: 'DroitEx',              tp: null },
+        { label: 'Electrostatique',                        coeff: 3.5, ds: 'ElectrostatiqueDS',     ex: 'ElectrostatiqueEx',    tp: 'ElectrostatiqueTP' },
+        { label: 'Français',                               coeff: 1.5, ds: 'FrançaisDS',            ex: 'FrançaisEx',           tp: null },
+        { label: 'Mécanique',                              coeff: 3.5, ds: 'MécaniqueDS',           ex: 'MécaniqueEx',          tp: null },
+        { label: 'Optique',                                coeff: 3.5, ds: 'OptiqueDS',             ex: 'OptiqueEx',            tp: 'OptiqueTP' },
+        { label: 'Programmation I',                        coeff: 2.5, ds: null,                    ex: 'ProgrammationEx',      tp: 'ProgrammationTP' },
+      ]},
+      { label: 'Semester 2', subjects: [
+        { label: 'Analyse II',                             coeff: 3,   ds: 'Analyse2DS',            ex: 'Analyse2Ex',           tp: null },
+        { label: 'Algèbre II',                             coeff: 3,   ds: 'Algebre2DS',            ex: 'Algebre2Ex',           tp: null },
+        { label: 'Algorithmique et Structures de Données II', coeff: 3, ds: 'Algo II DS',           ex: 'Algo II Ex',           tp: null },
+        { label: 'Anglais',                                coeff: 1.5, ds: 'Anglais2DS',            ex: 'Anglais2Ex',           tp: null },
+        { label: 'Economie',                               coeff: 1.5, ds: 'EconomieDS',            ex: 'EconomieEx',           tp: null },
+        { label: 'Electromagnétisme',                      coeff: 3,   ds: 'ElectromagnétismeDS',   ex: 'ElectromagnétismeEx',  tp: null },
+        { label: 'Electronique',                           coeff: 3.5, ds: 'ElectroniqueDS',        ex: 'ElectroniqueEx',       tp: 'ElectroniqueTP' },
+        { label: 'Français',                               coeff: 1.5, ds: 'Français2DS',           ex: 'Français2Ex',          tp: null },
+        { label: 'Systèmes Logiques',                      coeff: 3.5, ds: 'Systèmes LogiquesDS',   ex: 'Systèmes LogiquesEx',  tp: 'Systèmes LogiquesTP' },
+        { label: 'Thermodynamique',                        coeff: 4,   ds: 'ThermodynamiqueDS',     ex: 'ThermodynamiqueEx',    tp: 'ThermodynamiqueTP' },
+        { label: 'Programmation II',                       coeff: 2.5, ds: null,                    ex: 'Programmation2Ex',     tp: 'Programmation2TP' },
+      ]},
+    ]
+  },
+
+  'CBA': {
+    label: 'CBA', year: '1', field: 'CBA',
+    semesters: [
+      { label: 'Semester 1', subjects: [
+        { label: 'Mathématiques',                          coeff: 3.5, ds: 'MathsDS',              ex: 'MathsEx',              tp: null },
+        { label: 'Informatique 1',                         coeff: 3,   ds: 'Info1DS',              ex: 'Info1Ex',              tp: 'Info1TP' },
+        { label: 'Electrostatique et Electromagnétisme',   coeff: 3,   ds: 'ElecStatDS',           ex: 'ElecStatEx',           tp: 'ElecStatTP' },
+        { label: 'Optique géométrique',                    coeff: 3,   ds: 'OptiqueDS',            ex: 'OptiqueEx',            tp: 'OptiqueTP' },
+        { label: 'Chimie Générale',                        coeff: 6,   ds: 'ChimieGenDS',          ex: 'ChimieGenEx',          tp: 'ChimieGenTP' },
+        { label: 'Biologie cellulaire et moléculaire',     coeff: 5,   ds: 'BioCellDS',            ex: 'BioCellEx',            tp: 'BioCellTP' },
+        { label: 'Génétique',                              coeff: 2,   ds: 'GenetiqueDS',          ex: 'GenetiqueEx',          tp: null },
+        { label: 'Anglais',                                coeff: 1.5, ds: 'AnglaisDS',            ex: 'AnglaisEx',            tp: null },
+        { label: 'Français',                               coeff: 1.5, ds: 'FrançaisDS',           ex: 'FrançaisEx',           tp: null },
+        { label: "Introduction à l'économie",              coeff: 1.5, ds: 'EcoDS',                ex: 'EcoEx',                tp: null },
+      ]},
+      { label: 'Semester 2', subjects: [
+        { label: 'Statistiques et Probabilités',           coeff: 3,   ds: 'StatsDS',              ex: 'StatsEx',              tp: null },
+        { label: 'Informatique 2',                         coeff: 2,   ds: 'Info2DS',              ex: 'Info2Ex',              tp: 'Info2TP' },
+        { label: 'Mécanique générale',                     coeff: 3,   ds: 'MecaGenDS',            ex: 'MecaGenEx',            tp: 'MecaGenTP' },
+        { label: 'Mécanique des fluides',                  coeff: 3,   ds: 'MecaFluDS',            ex: 'MecaFluEx',            tp: 'MecaFluTP' },
+        { label: "De l'atome à la molécule",               coeff: 3,   ds: 'AtomeDS',              ex: 'AtomeEx',              tp: null },
+        { label: 'Réactivité NSP',                         coeff: 3,   ds: 'ReactNSPDS',           ex: 'ReactNSPEx',           tp: 'ReactNSPTP' },
+        { label: 'Chimie organique',                       coeff: 4.5, ds: 'ChimieOrgDS',          ex: 'ChimieOrgEx',          tp: 'ChimieOrgTP' },
+        { label: 'Biochimie structurale',                  coeff: 4,   ds: 'BiochimieDS',          ex: 'BiochimieEx',          tp: null },
+        { label: 'Anglais',                                coeff: 1.5, ds: 'Anglais2DS',           ex: 'Anglais2Ex',           tp: null },
+        { label: 'Français',                               coeff: 1.5, ds: 'Français2DS',          ex: 'Français2Ex',          tp: null },
+        { label: 'Droit',                                  coeff: 1.5, ds: 'DroitDS',              ex: 'DroitEx',              tp: null },
+      ]},
+    ]
+  },
+
+  // ─── YEAR 2 · MPI TRACK ──────────────────────────────────────────────────
+
+  'GL2': {
+    label: 'GL2', year: '2', field: 'GL',
+    semesters: [
+      { label: 'Semester 1', subjects: [
+        { label: 'Architecture Des Ordinateurs',           coeff: 3,   ds: 'ADODS',                ex: 'ADOEx',                tp: null },
+        { label: 'Anglais',                                coeff: 1.5, ds: 'AnglaisDS',            ex: 'AnglaisEx',            tp: null },
+        { label: 'Bases de Données',                       coeff: 4,   ds: 'BDDDS',               ex: 'BDDEx',                tp: 'BDDTP' },
+        { label: 'Français',                               coeff: 1.5, ds: 'FrançaisDS',           ex: 'FrançaisEx',           tp: null },
+        { label: 'Gestion',                                coeff: 1.5, ds: 'GestionDS',            ex: 'GestionEx',            tp: null },
+        { label: 'Programmation Orientée Objet',           coeff: 4,   ds: 'POODS',               ex: 'POOEx',                tp: 'POOTP' },
+        { label: 'Probabilités et Statistiques',           coeff: 3,   ds: 'ProbaDS',              ex: 'ProbaEx',              tp: null },
+        { label: 'Mathématiques du Signal',                coeff: 3,   ds: 'MDS',                  ex: 'MEx',                  tp: null },
+        { label: 'Techniques de Transmission',             coeff: 3,   ds: 'TXDS',                ex: 'TXEx',                 tp: null },
+        { label: "Systèmes d'Exploitation",                coeff: 3,   ds: 'SEDS',                ex: 'SEEx',                 tp: null },
+        { label: 'C++',                                    coeff: 2,   ds: null,                   ex: 'CPPEx',                tp: 'CPPTP' },
+        { label: 'Python',                                 coeff: 2,   ds: null,                   ex: 'PythonEx',             tp: 'PythonTP' },
+      ]},
+      { label: 'Semester 2', subjects: [
+        { label: 'Algèbre',                                coeff: 3,   ds: 'AlgebreDS',            ex: 'AlgebreEx',            tp: null },
+        { label: 'Analyse Mathématique',                   coeff: 3,   ds: 'AnalyseDS',            ex: 'AnalyseEx',            tp: null },
+        { label: 'Architecture des Réseaux',               coeff: 3,   ds: 'RéseauxDS',            ex: 'RéseauxEx',            tp: 'RéseauxTP' },
+        { label: 'Anglais',                                coeff: 1.5, ds: 'Anglais2DS',           ex: 'Anglais2Ex',           tp: null },
+        { label: 'Comptabilité',                           coeff: 1.5, ds: 'ComptaDS',             ex: 'ComptaEx',             tp: null },
+        { label: "Conception des Systèmes d'Information",  coeff: 4,   ds: 'ConceptionDS',         ex: 'ConceptionEx',         tp: 'ConceptionTP' },
+        { label: 'Droit',                                  coeff: 1.5, ds: 'DroitDS',              ex: 'DroitEx',              tp: null },
+        { label: 'SGBD',                                   coeff: 2.5, ds: 'SGBDDS',              ex: 'SGBDEx',               tp: 'SGBDTP' },
+        { label: 'Java',                                   coeff: 2,   ds: null,                   ex: 'JavaEx',               tp: 'JavaTP' },
+        { label: 'WEB',                                    coeff: 2,   ds: null,                   ex: 'WEBEx',                tp: 'WEBTP' },
+        { label: 'Unix',                                   coeff: 2,   ds: null,                   ex: 'UnixEx',               tp: 'UnixTP' },
+        { label: 'Applications Réparties',                 coeff: 2.5, ds: null,                   ex: 'ApplicationsRépartiesEx', tp: 'ApplicationsRépartiesTP' },
+      ]},
+    ]
+  },
+
+  'RT2': {
+    label: 'RT2', year: '2', field: 'RT',
+    semesters: [
+      { label: 'Semester 1', subjects: [
+        { label: 'Architecture Des Ordinateurs',           coeff: 2,   ds: 'ADODS',                ex: 'ADOEx',                tp: null },
+        { label: 'Anglais',                                coeff: 1.5, ds: 'AnglaisDS',            ex: 'AnglaisEx',            tp: null },
+        { label: 'Architecture Des Réseaux',               coeff: 3,   ds: 'ARDS',                 ex: 'AREx',                 tp: 'ARTP' },
+        { label: 'Electronique',                           coeff: 3,   ds: 'ElectroniqueDS',        ex: 'ElectroniqueEx',       tp: 'ElectroniqueTP' },
+        { label: 'Français',                               coeff: 1.5, ds: 'FrançaisDS',           ex: 'FrançaisEx',           tp: null },
+        { label: 'Gestion',                                coeff: 1.5, ds: 'GestionDS',            ex: 'GestionEx',            tp: null },
+        { label: 'Programmation Orientée Objet',           coeff: 3,   ds: 'POODS',               ex: 'POOEx',                tp: 'POOTP' },
+        { label: 'Probabilités et Statistiques',           coeff: 3,   ds: 'ProbaDS',              ex: 'ProbaEx',              tp: null },
+        { label: 'Mathématiques du Signal',                coeff: 3,   ds: 'MDS',                  ex: 'MEx',                  tp: null },
+        { label: "Systèmes d'Exploitation",                coeff: 3,   ds: 'SEDS',                ex: 'SEEx',                 tp: null },
+        { label: 'C++',                                    coeff: 2,   ds: null,                   ex: 'CPPEx',                tp: 'CPPTP' },
+        { label: 'Python',                                 coeff: 2,   ds: null,                   ex: 'PythonEx',             tp: 'PythonTP' },
+      ]},
+      { label: 'Semester 2', subjects: [
+        { label: 'Algèbre',                                coeff: 3,   ds: 'AlgebreDS',            ex: 'AlgebreEx',            tp: null },
+        { label: 'Analyse Mathématique',                   coeff: 3,   ds: 'AnalyseDS',            ex: 'AnalyseEx',            tp: null },
+        { label: 'Réseaux Locaux',                         coeff: 3,   ds: 'RéseauxDS',            ex: 'RéseauxEx',            tp: 'RéseauxTP' },
+        { label: 'Anglais',                                coeff: 1.5, ds: 'Anglais2DS',           ex: 'Anglais2Ex',           tp: null },
+        { label: 'Comptabilité',                           coeff: 1,   ds: 'ComptaDS',             ex: 'ComptaEx',             tp: null },
+        { label: 'Ondes et Propagation',                   coeff: 2,   ds: 'OndesDS',              ex: 'OndesEx',              tp: null },
+        { label: 'Droit',                                  coeff: 1,   ds: 'DroitDS',              ex: 'DroitEx',              tp: null },
+        { label: 'Bases de Données',                       coeff: 3,   ds: 'BDDDS',               ex: 'BDDEx',                tp: 'BDDTP' },
+        { label: 'Techniques de Transmission',             coeff: 2,   ds: 'TransmissionDS',       ex: 'TransmissionEx',       tp: null },
+        { label: 'Télé-informatique',                      coeff: 3,   ds: 'TeleDS',               ex: 'TeleEx',               tp: 'TeleTP' },
+        { label: 'Java',                                   coeff: 2,   ds: null,                   ex: 'JavaEx',               tp: 'JavaTP' },
+        { label: 'WEB',                                    coeff: 2,   ds: null,                   ex: 'WEBEx',                tp: 'WEBTP' },
+        { label: 'Unix',                                   coeff: 2,   ds: null,                   ex: 'UnixEx',               tp: 'UnixTP' },
+      ]},
+    ]
+  },
+
+  'IIA2': {
+    label: 'IIA2', year: '2', field: 'IIA',
+    semesters: [
+      { label: 'Semester 1', subjects: [
+        { label: 'Architecture Des Ordinateurs',           coeff: 2,   ds: 'ADODS',                ex: 'ADOEx',                tp: null },
+        { label: 'Anglais',                                coeff: 1.5, ds: 'AnglaisDS',            ex: 'AnglaisEx',            tp: null },
+        { label: 'Automatique',                            coeff: 3,   ds: 'AutoDS',               ex: 'AutoEx',               tp: 'AutoTP' },
+        { label: 'Comptabilité',                           coeff: 1.5, ds: 'ComptabilitéDS',       ex: 'ComptabilitéEx',       tp: null },
+        { label: 'Electronique',                           coeff: 3,   ds: 'ElectroniqueDS',        ex: 'ElectroniqueEx',       tp: 'ElectroniqueTP' },
+        { label: 'Electrotechnique',                       coeff: 3.5, ds: 'ElectrotechniqueDS',   ex: 'ElectrotechniqueEx',   tp: 'ElectrotechniqueTP' },
+        { label: 'Français',                               coeff: 1.5, ds: 'FrançaisDS',           ex: 'FrançaisEx',           tp: null },
+        { label: 'Mécanique des Solides',                  coeff: 3,   ds: 'MSIDS',               ex: 'MSIEx',                tp: 'MSITP' },
+        { label: 'Probabilités et Statistiques',           coeff: 3,   ds: 'ProbaDS',              ex: 'ProbaEx',              tp: null },
+        { label: 'Mathématiques du Signal',                coeff: 3,   ds: 'MDS',                  ex: 'MEx',                  tp: null },
+        { label: 'Programmation Orientée Objet',           coeff: 3,   ds: 'POODS',               ex: 'POOEx',                tp: 'POOTP' },
+        { label: "Systèmes d'Exploitation",                coeff: 3.5, ds: 'SEDS',                ex: 'SEEx',                 tp: null },
+      ]},
+      { label: 'Semester 2', subjects: [
+        { label: 'Algèbre',                                coeff: 3,   ds: 'AlgebreDS',            ex: 'AlgebreEx',            tp: null },
+        { label: 'Analyse Mathématique',                   coeff: 3,   ds: 'AnalyseDS',            ex: 'AnalyseEx',            tp: null },
+        { label: 'Anglais',                                coeff: 1.5, ds: 'Anglais2DS',           ex: 'Anglais2Ex',           tp: null },
+        { label: 'Automatique Continue',                   coeff: 3,   ds: 'AutoConDS',            ex: 'AutoConEx',            tp: 'AutoConTP' },
+        { label: 'Capteurs et Actionneurs',                coeff: 3,   ds: 'CapteursDS',           ex: 'CapteursEx',           tp: 'CapteursTP' },
+        { label: 'Droit',                                  coeff: 1,   ds: 'DroitDS',              ex: 'DroitEx',              tp: null },
+        { label: 'Electricité Industrielle',               coeff: 3,   ds: 'ElecDS',               ex: 'ElecEx',               tp: 'ElecTP' },
+        { label: 'Electronique de Puissance',              coeff: 3,   ds: 'PuisDS',               ex: 'PuisEx',               tp: 'PuisTP' },
+        { label: 'Gestion',                                coeff: 1,   ds: 'GestionDS',            ex: 'GestionEx',            tp: null },
+        { label: 'Microprocesseurs et Interfaces',         coeff: 3,   ds: 'ProcDS',               ex: 'ProcEx',               tp: 'ProcTP' },
+        { label: 'Réseaux',                                coeff: 2,   ds: 'RéseauxDS',            ex: 'RéseauxEx',            tp: null },
+        { label: 'Traitement de Signal',                   coeff: 2,   ds: 'SignalDS',              ex: 'SignalEx',             tp: null },
+      ]},
+    ]
+  },
+
+  'IMI2': {
+    label: 'IMI2', year: '2', field: 'IMI',
+    semesters: [
+      { label: 'Semester 1', subjects: [
+        { label: 'Anglais',                                coeff: 1.5, ds: 'AnglaisDS',            ex: 'AnglaisEx',            tp: null },
+        { label: 'Automatique',                            coeff: 3,   ds: 'AutoDS',               ex: 'AutoEx',               tp: 'AutoTP' },
+        { label: 'Comptabilité',                           coeff: 1.5, ds: 'ComptabilitéDS',       ex: 'ComptabilitéEx',       tp: null },
+        { label: 'Electronique',                           coeff: 3,   ds: 'ElectroniqueDS',        ex: 'ElectroniqueEx',       tp: 'ElectroniqueTP' },
+        { label: 'Electrotechnique',                       coeff: 3,   ds: 'ElectrotechniqueDS',   ex: 'ElectrotechniqueEx',   tp: 'ElectrotechniqueTP' },
+        { label: 'Français',                               coeff: 1.5, ds: 'FrançaisDS',           ex: 'FrançaisEx',           tp: null },
+        { label: 'Incertitude des Mesures',                coeff: 3,   ds: 'IncertitudeDS',        ex: 'IncertitudeEx',        tp: 'IncertitudeTP' },
+        { label: 'Mathématiques du Signal',                coeff: 3,   ds: 'MDS',                  ex: 'MEx',                  tp: null },
+        { label: 'Méthodes et Moyens de Maintenance',      coeff: 3,   ds: 'MMMDS',               ex: 'MMMEx',                tp: null },
+        { label: 'Microprocesseurs',                       coeff: 3,   ds: 'MicroprocDS',          ex: 'MicroprocEx',          tp: 'MicroprocTP' },
+        { label: 'Probabilités et Statistiques',           coeff: 3,   ds: 'ProbaDS',              ex: 'ProbaEx',              tp: null },
+        { label: "Systèmes d'Exploitation",                coeff: 3,   ds: 'SEDS',                ex: 'SEEx',                 tp: null },
+      ]},
+      { label: 'Semester 2', subjects: [
+        { label: 'Algèbre',                                coeff: 3,   ds: 'AlgebreDS',            ex: 'AlgebreEx',            tp: null },
+        { label: 'Analyse Mathématique',                   coeff: 3,   ds: 'AnalyseDS',            ex: 'AnalyseEx',            tp: null },
+        { label: 'Anglais',                                coeff: 1.5, ds: 'Anglais2DS',           ex: 'Anglais2Ex',           tp: null },
+        { label: 'Capteurs',                               coeff: 3,   ds: 'CapteursDS',           ex: 'CapteursEx',           tp: 'CapteursTP' },
+        { label: 'Droit',                                  coeff: 1,   ds: 'DroitDS',              ex: 'DroitEx',              tp: null },
+        { label: 'Electronique de Puissance',              coeff: 3,   ds: 'PuisDS',               ex: 'PuisEx',               tp: 'PuisTP' },
+        { label: 'Gestion',                                coeff: 1,   ds: 'GestionDS',            ex: 'GestionEx',            tp: null },
+        { label: 'Mécanique des Solides',                  coeff: 3,   ds: 'MDSDS',               ex: 'MDSEx',                tp: 'MDSTP' },
+        { label: 'Ondes et Propagation',                   coeff: 2,   ds: 'OndesDS',              ex: 'OndesEx',              tp: null },
+        { label: 'Programmation Orientée Objet',           coeff: 3,   ds: 'POODS',               ex: 'POOEx',                tp: 'POOTP' },
+        { label: 'Technologie Mécanique',                  coeff: 3,   ds: 'TecMecDS',             ex: 'TecMecEx',             tp: 'TecMecTP' },
+        { label: 'Traitement de Signal',                   coeff: 2,   ds: 'SignalDS',              ex: 'SignalEx',             tp: null },
+      ]},
+    ]
+  },
+
+  // ─── YEAR 2 · CBA TRACK ──────────────────────────────────────────────────
+
+  'CH2': {
+    label: 'CH2', year: '2', field: 'CH',
+    semesters: [
+      { label: 'Semester 1', subjects: [
+        { label: 'Mathématiques',                          coeff: 3,   ds: 'MathsDS',              ex: 'MathsEx',              tp: null },
+        { label: 'Technologie chimique',                   coeff: 4,   ds: 'TechChimDS',           ex: 'TechChimEx',           tp: 'TechChimTP' },
+        { label: 'Méthodes de séparation chromatographique', coeff: 4, ds: 'SepChromDS',           ex: 'SepChromEx',           tp: 'SepChromTP' },
+        { label: "Méthodes spectroscopiques d'analyse",    coeff: 4,   ds: 'SpectroDS',            ex: 'SpectroEx',            tp: 'SpectroTP' },
+        { label: 'Cinétique chimique',                     coeff: 4,   ds: 'CinetiqueDS',          ex: 'CinetiqueEx',          tp: 'CinetiqueTP' },
+        { label: 'Equilibres des phases',                  coeff: 4,   ds: 'EquilibreDS',          ex: 'EquilibreEx',          tp: 'EquilibreTP' },
+        { label: 'Synthèse organique',                     coeff: 4,   ds: 'SynthOrgDS',           ex: 'SynthOrgEx',           tp: 'SynthOrgTP' },
+        { label: 'Anglais',                                coeff: 1.5, ds: 'AnglaisDS',            ex: 'AnglaisEx',            tp: null },
+        { label: 'Gestion',                                coeff: 1.5, ds: 'GestionDS',            ex: 'GestionEx',            tp: null },
+      ]},
+      { label: 'Semester 2', subjects: [
+        { label: 'Thermodynamique appliquée',              coeff: 4,   ds: 'ThermoDS',             ex: 'ThermoEx',             tp: 'ThermoTP' },
+        { label: 'Mécanique des fluides',                  coeff: 4,   ds: 'MecaFluDS',            ex: 'MecaFluEx',            tp: 'MecaFluTP' },
+        { label: 'Equilibres électrochimiques',            coeff: 4,   ds: 'EqElectroDS',          ex: 'EqElectroEx',          tp: 'EqElectroTP' },
+        { label: 'Cinétique électrochimique',              coeff: 4.5, ds: 'CinElectroDS',         ex: 'CinElectroEx',         tp: 'CinElectroTP' },
+        { label: 'Produits naturels et molécules du vivant', coeff: 4.5, ds: 'ProdNatDS',          ex: 'ProdNatEx',            tp: 'ProdNatTP' },
+        { label: 'Physicochimie analytique',               coeff: 4,   ds: null,                   ex: 'PhysicoAnaEx',         tp: 'PhysicoAnaTP' },
+        { label: 'Anglais',                                coeff: 1.5, ds: 'Anglais2DS',           ex: 'Anglais2Ex',           tp: null },
+        { label: 'Français',                               coeff: 1.5, ds: 'Français2DS',          ex: 'Français2Ex',          tp: null },
+        { label: "Droit de l'Homme",                       coeff: 1,   ds: 'DroitDS',              ex: 'DroitEx',              tp: null },
+        { label: 'Comptabilité',                           coeff: 1,   ds: 'ComptaDS',             ex: 'ComptaEx',             tp: null },
+      ]},
+    ]
+  },
+
+  'BIO2': {
+    label: 'BIO2', year: '2', field: 'BIO',
+    semesters: [
+      { label: 'Semester 1', subjects: [
+        { label: 'Mathématiques',                          coeff: 3,   ds: 'MathsDS',              ex: 'MathsEx',              tp: null },
+        { label: 'Méthodes en biotechnologie',             coeff: 4,   ds: 'MethBioDS',            ex: 'MethBioEx',            tp: 'MethBioTP' },
+        { label: 'Informatique industrielle',              coeff: 2.5, ds: 'InfoIndusDS',          ex: 'InfoIndusEx',          tp: 'InfoIndusTP' },
+        { label: 'Microbiologie générale',                 coeff: 4,   ds: 'MicroGenDS',           ex: 'MicroGenEx',           tp: 'MicroGenTP' },
+        { label: 'Microbiologie appliquée',                coeff: 3,   ds: 'MicroAppDS',           ex: 'MicroAppEx',           tp: 'MicroAppTP' },
+        { label: 'Biochimie métabolique',                  coeff: 3.5, ds: 'BioMetabDS',           ex: 'BioMetabEx',           tp: 'BioMetabTP' },
+        { label: 'Biochimie moléculaire',                  coeff: 2.5, ds: 'BioMolDS',             ex: 'BioMolEx',             tp: null },
+        { label: 'Biologie et physiologie animales',       coeff: 4.5, ds: 'BioAnimDS',            ex: 'BioAnimEx',            tp: 'BioAnimTP' },
+        { label: 'Anglais',                                coeff: 1.5, ds: 'AnglaisDS',            ex: 'AnglaisEx',            tp: null },
+        { label: 'Comptabilité',                           coeff: 1.5, ds: 'ComptaDS',             ex: 'ComptaEx',             tp: null },
+      ]},
+      { label: 'Semester 2', subjects: [
+        { label: 'Biologie végétale',                      coeff: 2.5, ds: 'BioVegDS',             ex: 'BioVegEx',             tp: 'BioVegTP' },
+        { label: 'Physiologie végétale',                   coeff: 3,   ds: 'PhysioVegDS',          ex: 'PhysioVegEx',          tp: 'PhysioVegTP' },
+        { label: 'Biochimie alimentaire',                  coeff: 3.5, ds: 'BioAlimDS',            ex: 'BioAlimEx',            tp: 'BioAlimTP' },
+        { label: 'Génie alimentaire',                      coeff: 3,   ds: 'GenieAlimDS',          ex: 'GenieAlimEx',          tp: null },
+        { label: 'Microbiologie industrielle et alimentaire', coeff: 4, ds: 'MicroIndusDS',        ex: 'MicroIndusEx',         tp: 'MicroIndusTP' },
+        { label: 'Technologie immunologique',              coeff: 4,   ds: 'ImmunoDS',             ex: 'ImmunoEx',             tp: 'ImmunoTP' },
+        { label: 'Analyses biochimiques',                  coeff: 3.5, ds: 'AnalyseBioDS',         ex: 'AnalyseBioEx',         tp: 'AnalyseBioTP' },
+        { label: 'Froid alimentaire',                      coeff: 1.5, ds: 'FroidDS',              ex: 'FroidEx',              tp: null },
+        { label: 'Anglais',                                coeff: 1.5, ds: 'Anglais2DS',           ex: 'Anglais2Ex',           tp: null },
+        { label: 'Français',                               coeff: 1.5, ds: 'Français2DS',          ex: 'Français2Ex',          tp: null },
+        { label: 'Gestion',                                coeff: 1,   ds: 'GestionDS',            ex: 'GestionEx',            tp: null },
+        { label: "Droit de l'homme",                       coeff: 1,   ds: 'DroitDS',              ex: 'DroitEx',              tp: null },
+      ]},
+    ]
+  },
+
+};
