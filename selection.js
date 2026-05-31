@@ -1,95 +1,44 @@
-const studyYear = document.querySelector("#StudyYear");
-const studyField = document.querySelector("#StudyField");
-
+// ─── Populate the field dropdown based on selected year ──────────────────────
 const updateSelection = () => {
+  const year      = document.getElementById('StudyYear').value;
+  const fieldSel  = document.getElementById('StudyField');
 
-    const year = studyYear.value;
-    
-    switch (year) {
-        case "1":
-            studyField.innerHTML = `
-                <option value="none">Select Field</option>
-                <option value="MPI">MPI</option>
-                <option value="CBA">CBA</option>
-            `; 
-            break;
-            
-        case "2":
-        case "3":
-        case "4":
-        case "5":
-            studyField.innerHTML = `
-                <option value="none">Select Field</option>
-                <option value="GL">GL</option>
-                <option value="RT">RT</option>
-                <option value="IMI">IMI</option>
-                <option value="IIA">IIA</option>
-                <option value="CH">CH</option>
-                <option value="BIO">BIO</option>
-            `;
-            break;
-            
-        default:
-            studyField.innerHTML = `
-                <option value="none">Select Year First</option>
-            `;
-            break;
-    }
-}
+  if (year === '1') {
+    fieldSel.innerHTML = `
+      <option value="none">Select Field</option>
+      <option value="MPI">MPI</option>
+      <option value="CBA">CBA</option>`;
+  } else if (['2','3','4','5'].includes(year)) {
+    fieldSel.innerHTML = `
+      <option value="none">Select Field</option>
+      <option value="GL">GL</option>
+      <option value="RT">RT</option>
+      <option value="IMI">IMI</option>
+      <option value="IIA">IIA</option>
+      <option value="CH">CH</option>
+      <option value="BIO">BIO</option>`;
+  } else {
+    fieldSel.innerHTML = `<option value="none">Select Year First</option>`;
+  }
+};
 
-studyYear.addEventListener("change", updateSelection);
+// Listen for year changes (used on landing page; on calculator page
+// the year is set programmatically so updateSelection is called directly)
+const yearEl = document.getElementById('StudyYear');
+if (yearEl) yearEl.addEventListener('change', updateSelection);
 
-
+// ─── Navigate to the right calculator page ───────────────────────────────────
 const load = () => {
-    const year = studyYear.value;
-    const field = studyField.value;
-    const showing = document.querySelector("#showing");
-    if (year === "none" || field === "none") {
-        alert("Select Year and Field Please :)");
-        return;
-    }
-    if (year === "1") {
-        if (field === "MPI") {
-            let pageLink = document.createElement("a");
-            pageLink.setAttribute("href", "mpiweb.html");
-            pageLink.click();
-        } else if (field === "CBA") {
-            let pageLink = document.createElement("a");
-            pageLink.setAttribute("href", "cbaweb.html");
-            pageLink.click();
-        }
-    } else {
-        switch (field) {
-            case "GL":
-                pageLink = document.createElement("a");
-                pageLink.setAttribute("href", "gl2web.html");
-                pageLink.click();
-                break;
-            case "RT":
-                pageLink = document.createElement("a");
-                pageLink.setAttribute("href", "rt2web.html");
-                pageLink.click();
-                break;
-            case "IMI":
-                pageLink = document.createElement("a");
-                pageLink.setAttribute("href", "imi2web.html");
-                pageLink.click();
-                break;
-            case "IIA":
-                pageLink = document.createElement("a");
-                pageLink.setAttribute("href", "iia2web.html");
-                pageLink.click();
-                break;
-            case "CH":
-                pageLink = document.createElement("a");
-                pageLink.setAttribute("href", "ch2web.html");
-                pageLink.click();
-                break;
-            case "BIO":
-                pageLink = document.createElement("a");
-                pageLink.setAttribute("href", "bio2web.html");
-                pageLink.click();
-                break;
-        }
-    }
-}
+  const year  = document.getElementById('StudyYear').value;
+  const field = document.getElementById('StudyField').value;
+
+  if (year === 'none' || field === 'none') {
+    alert('Please select a year and a field first :)');
+    return;
+  }
+
+  // Build the program key: year-1 fields keep their name (MPI / CBA),
+  // year-2+ fields get the year appended (GL2, RT3, IIA4 …)
+  const key = year === '1' ? field : `${field}${year}`;
+  window.location.href = `calculator.html?p=${key}`;
+};
