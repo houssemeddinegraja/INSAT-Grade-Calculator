@@ -9,9 +9,14 @@ const getVal = (name) => {
 // ─── Subject average (DS×0.3 + Ex×0.7 | TP×0.3 + Ex×0.7 | DS×0.2 + TP×0.2 + Ex×0.6) ─
 const subjectAvg = (s) => {
   const ds = getVal(s.ds), ex = getVal(s.ex), tp = getVal(s.tp);
-  if (s.ds && s.tp)  return ds * 0.2 + tp * 0.2 + ex * 0.6;
-  if (s.ds)          return ds * 0.3 + ex * 0.7;
-  if (s.tp)          return tp * 0.3 + ex * 0.7;
+  const hasDs = s.ds !== null && s.ds !== undefined;
+  const hasEx = s.ex !== null && s.ex !== undefined;
+  const hasTp = s.tp !== null && s.tp !== undefined;
+
+  if (hasDs && hasTp && hasEx) return ds * 0.2 + tp * 0.2 + ex * 0.6;
+  if (hasDs && hasEx) return ds * 0.3 + ex * 0.7;
+  if (hasTp && hasEx) return tp * 0.3 + ex * 0.7;
+  if (hasTp) return tp;  // only TP (e.g. Projet Personnel Professionnel)
   return ex;
 };
 
@@ -38,19 +43,21 @@ const computeAverages = () => {
 
 // ─── Build one subject row ────────────────────────────────────────────────────
 const subjectRow = (s) => {
-  const dsCell  = s.ds
-    ? `<input type="number" name="${s.ds}"  class="matiere" min="0" max="20" step="0.25">`
+  const dsCell = s.ds
+    ? `<input type="number" name="${s.ds}" class="matiere" min="0" max="20" step="0.25">`
     : `<div class="empty-cell"></div>`;
-  const tpCell  = s.tp
-    ? `<input type="number" name="${s.tp}"  class="matiere" min="0" max="20" step="0.25">`
+  const exCell = s.ex
+    ? `<input type="number" name="${s.ex}" class="matiere" min="0" max="20" step="0.25">`
+    : `<div class="empty-cell"></div>`;
+  const tpCell = s.tp
+    ? `<input type="number" name="${s.tp}" class="matiere" min="0" max="20" step="0.25">`
     : `<div class="empty-cell"></div>`;
   return `
     <span class="subject-label">${s.label}</span>
     ${dsCell}
-    <input type="number" name="${s.ex}" class="matiere" min="0" max="20" step="0.25">
+    ${exCell}
     ${tpCell}`;
 };
-
 // ─── Render a full program ────────────────────────────────────────────────────
 const renderProgram = (program) => {
   currentProgram = program;
