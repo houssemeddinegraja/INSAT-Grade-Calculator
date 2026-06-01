@@ -1,7 +1,5 @@
 const PROGRAMS = {
 
-  // ─── YEAR 1 ──────────────────────────────────────────────────────────────
-
   'MPI': {
     label: 'MPI', year: '1', field: 'MPI',
     semesters: [
@@ -65,8 +63,7 @@ const PROGRAMS = {
     ]
   },
 
-  // ─── YEAR 2 · MPI TRACK ──────────────────────────────────────────────────
-
+  
   'GL2': {
     label: 'GL2', year: '2', field: 'GL',
     semesters: [
@@ -204,8 +201,7 @@ const PROGRAMS = {
     ]
   },
 
-  // ─── YEAR 2 · CBA TRACK ──────────────────────────────────────────────────
-
+  
   'CH2': {
     label: 'CH2', year: '2', field: 'CH',
     semesters: [
@@ -266,5 +262,42 @@ const PROGRAMS = {
       ]},
     ]
   },
+  'GL3': {
+  label: 'GL3', year: '3', field: 'GL',
+  semesters: [
+    { label: 'Semester 1', subjects: [
+      { label: 'Recherche opérationnelle',                 coeff: 2.5, ds: 'S1_RechercheOpDS',   ex: 'S1_RechercheOpEx',   tp: 'S1_RechercheOpTP' },
+      { label: 'Modélisation des systèmes',                coeff: 2,   ds: 'S1_ModelisationDS',   ex: 'S1_ModelisationEx',   tp: null },
+      { label: 'Mathématiques Statistiques',               coeff: 3,   ds: 'S1_MathStatsDS',      ex: 'S1_MathStatsEx',      tp: null },
+      { label: 'Logique',                                  coeff: 2.5, ds: 'S1_LogiqueDS',        ex: 'S1_LogiqueEx',        tp: null },
+      { label: 'Complexité des algorithmes',               coeff: 2.5, ds: 'S1_ComplexiteDS',     ex: 'S1_ComplexiteEx',     tp: null },
+      { label: 'Architectures matérielles et prog. bas niveau', coeff: 2.5, ds: 'S1_ArchMatDS',   ex: 'S1_ArchMatEx',       tp: 'S1_ArchMatTP' },
+      { label: 'Unix : Administration système et réseau',  coeff: 2.5, ds: 'S1_UnixDS',           ex: 'S1_UnixEx',           tp: 'S1_UnixTP' },
+      { label: 'Ingénierie des Protocoles',                coeff: 2.5, ds: 'S1_IngProtoDS',       ex: 'S1_IngProtoEx',       tp: 'S1_IngProtoTP' },
+      { label: 'Frameworks de développement',              coeff: 2.5, ds: 'S1_FrameworkDS',      ex: 'S1_FrameworkEx',      tp: 'S1_FrameworkTP' },
+      { label: 'Analyse et Conception des Logiciels',      coeff: 2.5, ds: 'S1_ACLDS',            ex: 'S1_ACLEx',            tp: 'S1_ACLTP' },
+      { label: 'Anglais',                                  coeff: 1.5, ds: 'S1_AnglaisDS',        ex: 'S1_AnglaisEx',        tp: null },
+      { label: 'Arabe',                                    coeff: 1,   ds: 'S1_ArabeDS',          ex: 'S1_ArabeEx',          tp: null },
+      { label: 'Théorie des organisations',                coeff: 1,   ds: 'S1_TheoOrgDS',        ex: 'S1_TheoOrgEx',        tp: null },
+      { label: 'Français',                                 coeff: 1.5, ds: 'S1_FrancaisDS',       ex: 'S1_FrancaisEx',       tp: null },
+      { label: 'Communication dans l\'entreprise',         coeff: 1,   ds: 'S1_CommEntDS',        ex: 'S1_CommEntEx',        tp: null },
+    ]},
+    { label: 'Semester 2', subjects: [
+      { label: 'Analyse numérique',                        coeff: 2,   ds: 'S2_AnaNumDS',         ex: 'S2_AnaNumEx',         tp: null },
+      { label: 'Optimisation appliquée',                   coeff: 2,   ds: 'S2_OptimDS',           ex: 'S2_OptimEx',           tp: null },
+      { label: 'Analyse des données',                      coeff: 2.5, ds: 'S2_AnaDonneesDS',     ex: 'S2_AnaDonneesEx',     tp: 'S2_AnaDonneesTP' },
+      { label: 'Programmation logique',                    coeff: 3,   ds: 'S2_ProgLogDS',        ex: 'S2_ProgLogEx',        tp: 'S2_ProgLogTP' },
+      { label: 'Algorithmique avancée',                    coeff: 2.5, ds: 'S2_AlgoAvDS',         ex: 'S2_AlgoAvEx',         tp: null },
+      { label: 'Co-design',                                coeff: 2.5, ds: 'S2_CoDesignDS',       ex: 'S2_CoDesignEx',       tp: 'S2_CoDesignTP' },
+      { label: 'Fondements des systèmes et Applications réparties', coeff: 2.5, ds: 'S2_FondSysDS', ex: 'S2_FondSysEx',       tp: 'S2_FondSysTP' },
+      { label: 'Protocoles de communication Web-APIs',     coeff: 2.5, ds: null,                  ex: 'S2_WebProtoEx',        tp: 'S2_WebProtoTP' },
+      { label: 'Méthodologies de Conception',              coeff: 2.5, ds: 'S2_MethoConcepDS',    ex: 'S2_MethoConcepEx',    tp: 'S2_MethoConcepTP' },
+      { label: 'Bases de données non relationnelles',      coeff: 3,   ds: null,                  ex: 'S2_NoSQLEx',          tp: 'S2_NoSQLTP' },
+      { label: 'Anglais',                                  coeff: 1.5, ds: 'S2_AnglaisDS',        ex: 'S2_AnglaisEx',        tp: null },
+      { label: 'Marketing',                                coeff: 1.5, ds: 'S2_MarketingDS',      ex: 'S2_MarketingEx',      tp: null },
+      { label: 'Projet Personnel Professionnel',           coeff: 2,   ds: null,                  ex: null,                  tp: 'S2_ProjetTP' },
+    ]},
+  ]
+},
 
 };
