@@ -410,5 +410,39 @@ const PROGRAMS = {
       { label: 'Projet Personnel Professionnel',               coeff: 2,   ds: null,                ex: null,                  tp: 'S2_ProjetTP' },
     ]},
   ]
-}
+},
+  'GL4': {
+  label: 'GL4', year: '4', field: 'GL',
+  semesters: [
+    { label: 'Semester 1', subjects: [
+      { label: 'Théorie des langages',                       coeff: 2,   ds: 'S1_TheorieLangagesDS', ex: 'S1_TheorieLangagesEx', tp: null },
+      { label: 'Intelligence artificielle',                  coeff: 3,   ds: 'S1_IA_DS',            ex: 'S1_IA_Ex',            tp: 'S1_IA_TP' },
+      { label: 'Apprentissage et Fouille de données',        coeff: 2.5, ds: 'S1_AppFouilleDS',     ex: 'S1_AppFouilleEx',     tp: 'S1_AppFouilleTP' },
+      { label: 'Administration de bases de données',         coeff: 2.5, ds: 'S1_AdminBD_DS',       ex: 'S1_AdminBD_Ex',       tp: 'S1_AdminBD_TP' },
+      { label: 'Sécurisation des systèmes d\'information',   coeff: 2.5, ds: 'S1_SecuSI_DS',        ex: 'S1_SecuSI_Ex',        tp: 'S1_SecuSI_TP' },
+      { label: 'Systèmes temps réel',                        coeff: 2.5, ds: 'S1_STR_DS',           ex: 'S1_STR_Ex',           tp: 'S1_STR_TP' },
+      { label: 'Frameworks de développement II',             coeff: 2.5, ds: null,                  ex: 'S1_Framework2_Ex',     tp: 'S1_Framework2_TP' },
+      { label: 'Développement d\'applications mobiles',      coeff: 2.5, ds: null,                  ex: 'S1_Mobile_Ex',         tp: 'S1_Mobile_TP' },
+      { label: 'Anglais',                                    coeff: 1.5, ds: 'S1_AnglaisDS',        ex: 'S1_AnglaisEx',         tp: null },
+      { label: 'Communication Interpersonnelle',             coeff: 1.5, ds: null,                  ex: 'S1_CommInterEx',       tp: null },
+      { label: 'Gestion financière',                         coeff: 1.5, ds: 'S1_GestionFinDS',     ex: 'S1_GestionFinEx',      tp: null },
+      { label: 'Droit de l\'entreprise',                     coeff: 1.5, ds: 'S1_DroitDS',          ex: 'S1_DroitEx',           tp: null },
+    ]},
+    { label: 'Semester 2', subjects: [
+      { label: 'Compilation et Implémentation des langages', coeff: 2.5, ds: 'S2_CompilDS',         ex: 'S2_CompilEx',         tp: 'S2_CompilTP' },
+      { label: 'Tests Logiciels',                            coeff: 2.5, ds: null,                  ex: 'S2_TestsEx',           tp: 'S2_TestsTP' },
+      { label: 'Protocoles de sécurité',                     coeff: 2.5, ds: 'S2_ProtocoleSecDS',   ex: 'S2_ProtocoleSecEx',   tp: 'S2_ProtocoleSecTP' },
+      { label: 'Architectures logicielles',                  coeff: 2.5, ds: 'S2_ArchLogicielDS',   ex: 'S2_ArchLogicielEx',   tp: 'S2_ArchLogicielTP' },
+      { label: 'Big Data',                                   coeff: 2.5, ds: 'S2_BigDataDS',        ex: 'S2_BigDataEx',        tp: 'S2_BigDataTP' },
+      { label: 'Deep Learning',                              coeff: 2.5, ds: 'S2_DeepLearningDS',   ex: 'S2_DeepLearningEx',   tp: 'S2_DeepLearningTP' },
+      { label: 'Traitement d\'images',                       coeff: 2.5, ds: 'S2_TraitImgDS',       ex: 'S2_TraitImgEx',       tp: 'S2_TraitImgTP' },
+      { label: 'Interface Homme Machine (IHM)',              coeff: 1.5, ds: null,                  ex: 'S2_IHMEx',             tp: 'S2_IHMTP' },
+      { label: 'Anglais',                                    coeff: 1.5, ds: 'S2_AnglaisDS',        ex: 'S2_AnglaisEx',         tp: null },
+      { label: 'Gestion des ressources humaines (GRH)',      coeff: 1.5, ds: 'S2_GRHDS',            ex: 'S2_GRHEx',             tp: null },
+      { label: 'Management de projets',                      coeff: 1.5, ds: null,                  ex: 'S2_ManagementProjetEx', tp: null },
+      { label: 'Option',                                     coeff: 2.5, ds: 'S2_OptionDS',          ex: 'S2_OptionEx',          tp: 'S2_OptionTP' },
+      { label: 'Projet Personnel Professionnel',             coeff: 4,   ds: null,                  ex: null,                   tp: 'S2_ProjetTP' },
+    ]},
+  ]
+},
 };
