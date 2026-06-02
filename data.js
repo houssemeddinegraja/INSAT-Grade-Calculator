@@ -445,4 +445,75 @@ const PROGRAMS = {
     ]},
   ]
 },
+  'RT4': {
+  label: 'RT4', year: '4', field: 'RT',
+  semesters: [
+    { label: 'Semester 1', subjects: [
+      { label: 'Réseaux Haut débit',                         coeff: 2.5, ds: 'S1_ResHautDebitDS',   ex: 'S1_ResHautDebitEx',   tp: 'S1_ResHautDebitTP' },
+      { label: 'Protocoles de réseaux mobiles',              coeff: 2.5, ds: 'S1_ProtoResMobDS',    ex: 'S1_ProtoResMobEx',    tp: 'S1_ProtoResMobTP' },
+      { label: 'Techniques de transmission Haut débits',     coeff: 2.5, ds: 'S1_TechTransHDDS',    ex: 'S1_TechTransHDEx',    tp: 'S1_TechTransHDTP' },
+      { label: 'Frameworks de développement',                coeff: 2,   ds: null,                  ex: 'S1_FrameworkEx',      tp: 'S1_FrameworkTP' },
+      { label: 'Processus unifiés et approches agiles',      coeff: 2,   ds: 'S1_ProcessUnifDS',    ex: 'S1_ProcessUnifEx',    tp: 'S1_ProcessUnifTP' },
+      { label: 'Systèmes temps réels et embarqués',          coeff: 2,   ds: 'S1_STR_DS',           ex: 'S1_STR_Ex',           tp: 'S1_STR_TP' },
+      { label: 'Traitement numérique du signal et applications', coeff: 3.5, ds: 'S1_TraitNumSigDS', ex: 'S1_TraitNumSigEx',   tp: 'S1_TraitNumSigTP' },
+      { label: 'Machine Learning',                           coeff: 2.5, ds: 'S1_MachineLearningDS', ex: 'S1_MachineLearningEx', tp: 'S1_MachineLearningTP' },
+      { label: 'Anglais',                                    coeff: 1.5, ds: 'S1_AnglaisDS',        ex: 'S1_AnglaisEx',        tp: null },
+      { label: 'Communication Interpersonnelle',             coeff: 1.5, ds: null,                  ex: 'S1_CommInterEx',      tp: null },
+      { label: 'Droit des affaires',                         coeff: 1.5, ds: 'S1_DroitAffairesDS',  ex: 'S1_DroitAffairesEx',   tp: null },
+      { label: 'Gestion financière',                         coeff: 1.5, ds: 'S1_GestionFinDS',     ex: 'S1_GestionFinEx',     tp: null },
+    ]},
+    { label: 'Semester 2', subjects: [
+      { label: 'Cloud et Virtualisation',                    coeff: 2.5, ds: 'S2_CloudVirtDS',      ex: 'S2_CloudVirtEx',      tp: 'S2_CloudVirtTP' },
+      { label: 'Modélisation et Evaluation des performances des réseaux', coeff: 2.5, ds: 'S2_ModelEvalPerfDS', ex: 'S2_ModelEvalPerfEx', tp: 'S2_ModelEvalPerfTP' },
+      { label: 'Deep Learning',                              coeff: 2,   ds: 'S2_DeepLearningDS',   ex: 'S2_DeepLearningEx',   tp: 'S2_DeepLearningTP' },
+      { label: 'Théorie des langages et des automates',      coeff: 1.5, ds: 'S2_TheorieLangagesDS', ex: 'S2_TheorieLangagesEx', tp: null },
+      { label: 'Théorie de l\'information et codage',        coeff: 1.5, ds: 'S2_TheorieInfoDS',    ex: 'S2_TheorieInfoEx',    tp: null },
+      { label: 'Traitement d\'images',                       coeff: 2,   ds: 'S2_TraitImgDS',       ex: 'S2_TraitImgEx',       tp: 'S2_TraitImgTP' },
+      { label: 'Business Intelligence',                      coeff: 2,   ds: 'S2_BusinessIntelDS',  ex: 'S2_BusinessIntelEx',  tp: 'S2_BusinessIntelTP' },
+      { label: 'Big Data',                                   coeff: 2,   ds: 'S2_BigDataDS',        ex: 'S2_BigDataEx',        tp: 'S2_BigDataTP' },
+      { label: 'Fondements des systèmes et applications réparties', coeff: 2, ds: null,           ex: 'S2_FondSysRepEx',     tp: 'S2_FondSysRepTP' },
+      { label: 'Anglais',                                    coeff: 1.5, ds: null,                  ex: 'S2_AnglaisEx',        tp: null },
+      { label: 'Gestion des ressources humaines (GRH)',      coeff: 1.5, ds: 'S2_GRHDS',            ex: 'S2_GRHEx',            tp: null },
+      { label: 'Management de projets',                      coeff: 1.5, ds: null,                  ex: 'S2_ManagementProjetEx', tp: null },
+      { label: 'Option',                                     coeff: 2.5, ds: 'S2_OptionDS',         ex: 'S2_OptionEx',          tp: 'S2_OptionTP' },
+      { label: 'Projet Personnel Professionnel',             coeff: 4,   ds: null,                  ex: null,                   tp: 'S2_ProjetTP' },      
+    ]},
+  ]
+},
+
+  'IIA4': {
+  label: 'IIA4', year: '4', field: 'IIA',
+  semesters: [
+    { label: 'Semester 1', subjects: [
+      { label: 'Machines électriques',                        coeff: 2.5, ds: 'S1_MachinesElecDS',     ex: 'S1_MachinesElecEx',     tp: 'S1_MachinesElecTP' },
+      { label: 'Systèmes mécaniques articulés',               coeff: 2.5, ds: 'S1_SysMecArticDS',     ex: 'S1_SysMecArticEx',     tp: 'S1_SysMecArticTP' },
+      { label: 'Systèmes multivariables',                     coeff: 2.5, ds: 'S1_SysMultivDS',       ex: 'S1_SysMultivEx',       tp: 'S1_SysMultivTP' },
+      { label: 'Sûreté de fonctionnement',                    coeff: 1.5, ds: 'S1_SureteFoncDS',      ex: 'S1_SureteFoncEx',      tp: null },
+      { label: 'Outils et démarches qualité',                 coeff: 2,   ds: 'S1_OutilsQualiteDS',   ex: 'S1_OutilsQualiteEx',   tp: 'S1_OutilsQualiteTP' },
+      { label: 'GPAO',                                        coeff: 3,   ds: 'S1_GPAODS',            ex: 'S1_GPAOEx',            tp: 'S1_GPAOTP' },
+      { label: 'Conception des systèmes VLSI',                coeff: 2.5, ds: 'S1_VLSIDS',            ex: 'S1_VLSIEx',            tp: 'S1_VLSITP' },
+      { label: 'Conception objet des systèmes d\'information (UML)', coeff: 2.5, ds: 'S1_UMLDS',      ex: 'S1_UMLEX',             tp: 'S1_UMLTP' },
+      { label: 'Informatique temps réel',                     coeff: 2.5, ds: 'S1_InfoTempsReelDS',   ex: 'S1_InfoTempsReelEx',   tp: 'S1_InfoTempsReelTP' },
+      { label: 'Traitement d\'images et vision',              coeff: 2.5, ds: 'S1_TraitImgVisionDS',  ex: 'S1_TraitImgVisionEx',  tp: 'S1_TraitImgVisionTP' },
+      { label: 'Anglais',                                     coeff: 1.5, ds: 'S1_AnglaisDS',         ex: 'S1_AnglaisEx',         tp: null },
+      { label: 'Communication Interpersonnelle',              coeff: 1.5, ds: null,                   ex: 'S1_CommInterEx',       tp: null },
+      { label: 'Gestion financière',                          coeff: 1.5, ds: 'S1_GestionFinDS',      ex: 'S1_GestionFinEx',      tp: null },
+      { label: 'Droit des affaires',                          coeff: 1.5, ds: 'S1_DroitAffairesDS',   ex: 'S1_DroitAffairesEx',   tp: null },
+    ]},
+    { label: 'Semester 2', subjects: [
+      { label: 'Systèmes non linéaires',                      coeff: 2.5, ds: 'S2_SysNonLinDS',       ex: 'S2_SysNonLinEx',       tp: null },
+      { label: 'Commande optimale',                           coeff: 2.5, ds: 'S2_CommandeOptDS',   ex: 'S2_CommandeOptEx',     tp: 'S2_CommandeOptTP' },
+      { label: 'Conception Assistée par Ordinateur (CAO)',    coeff: 2.5, ds: null,                   ex: 'S2_CAOEx',             tp: 'S2_CAOTP' },
+      { label: 'Modélisation et évaluation de performances',  coeff: 2.5, ds: 'S2_ModelEvalPerfDS',   ex: 'S2_ModelEvalPerfEx',   tp: 'S2_ModelEvalPerfTP' },
+      { label: 'Réseaux locaux industriels et Réseaux de capteurs', coeff: 2.5, ds: 'S2_ResLocIndusDS',            ex: 'S2_ResLocIndusEx',     tp: 'S2_ResLocIndusTP' },
+      { label: 'Anglais',                                     coeff: 1.5, ds: null,                   ex: 'S2_AnglaisEx',         tp: null },
+      { label: 'Gestion des ressources humaines (GRH)',       coeff: 1.5, ds: 'S2_GRHDS',             ex: 'S2_GRHEx',             tp: null },
+      { label: 'Management de projets',                       coeff: 1.5, ds: null,                   ex: 'S2_ManagementProjetEx', tp: null },
+      { label: 'Projet Personnel Professionnel',              coeff: 4,   ds: null,                   ex: null,                   tp: 'S2_ProjetTP' },
+      // Option
+      { label: 'Option Matière 1',                            coeff: 2.5, ds: 'S2_Option1DS',         ex: 'S2_Option1Ex', tp: 'S2_Option1TP' },
+      { label: 'Option Matière 2',                            coeff: 2.5, ds: 'S2_Option2DS',         ex: 'S2_Option2Ex', tp: 'S2_Option2TP' },
+    ]},
+  ]
+},
 };
