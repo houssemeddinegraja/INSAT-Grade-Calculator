@@ -373,4 +373,41 @@ const PROGRAMS = {
     ]},
   ]
 },
+  'IMI3': {
+  label: 'IMI3', year: '3', field: 'IMI',
+  semesters: [
+    { label: 'Semester 1', subjects: [
+      { label: 'RDM',                                          coeff: 2.5, ds: 'S1_RDMDS',          ex: 'S1_RDMEx',          tp: 'S1_RDMTP' },
+      { label: 'Fiabilité des systèmes',                       coeff: 2,   ds: 'S1_FiabiliteDS',     ex: 'S1_FiabiliteEx',    tp: null },
+      { label: 'Connaissance et surveillance des installations électriques', coeff: 2.5, ds: 'S1_ConnaissInstElecDS', ex: 'S1_ConnaissInstElecEx', tp: 'S1_ConnaissInstElecTP' },
+      { label: 'Techniques d\'étalonnage',                     coeff: 2.5, ds: 'S1_TechEtalDS',      ex: 'S1_TechEtalEx',      tp: 'S1_TechEtalTP' },
+      { label: 'Automatismes industriels',                     coeff: 2.5, ds: 'S1_AutoIndusDS',     ex: 'S1_AutoIndusEx',     tp: 'S1_AutoIndusTP' },
+      { label: 'Conception des systèmes mécaniques',           coeff: 2.5, ds: 'S1_ConcepSysMecDS',  ex: 'S1_ConcepSysMecEx',  tp: 'S1_ConcepSysMecTP' },
+      { label: 'Fonctions électroniques',                      coeff: 2.5, ds: 'S1_FonctElecDS',     ex: 'S1_FonctElecEx',     tp: 'S1_FonctElecTP' },
+      { label: 'Analyse numérique',                            coeff: 2.5, ds: 'S1_AnaNumDS',        ex: 'S1_AnaNumEx',        tp: 'S1_AnaNumTP' },
+      { label: 'Mathématiques de l\'ingénieur',                coeff: 3,   ds: 'S1_MathIngDS',       ex: 'S1_MathIngEx',       tp: null },
+      { label: 'Bases de données',                             coeff: 2.5, ds: 'S1_BDDDS',           ex: 'S1_BDDEx',           tp: 'S1_BDDTP' },
+      { label: 'Anglais',                                      coeff: 1.5, ds: 'S1_AnglaisDS',       ex: 'S1_AnglaisEx',       tp: null },
+      { label: 'Français',                                     coeff: 1.5, ds: 'S1_FrancaisDS',      ex: 'S1_FrancaisEx',      tp: null },
+      { label: 'Théorie des organisations',                    coeff: 1,   ds: 'S1_TheoOrgDS',       ex: 'S1_TheoOrgEx',       tp: null },
+      { label: 'Communication dans l\'entreprise',             coeff: 1,   ds: 'S1_CommEntDS',       ex: 'S1_CommEntEx',       tp: null },
+    ]},
+    { label: 'Semester 2', subjects: [
+      { label: 'Thermique industrielle',                       coeff: 2.5, ds: 'S2_ThermIndusDS',    ex: 'S2_ThermIndusEx',    tp: 'S2_ThermIndusTP' },
+      { label: 'Mécanique des fluides',                        coeff: 2.5, ds: 'S2_MecaFluDS',       ex: 'S2_MecaFluEx',       tp: 'S2_MecaFluTP' },
+      { label: 'Thermodynamique appliquée',                    coeff: 2.5, ds: 'S2_ThermoAppDS',     ex: 'S2_ThermoAppEx',     tp: 'S2_ThermoAppTP' },
+      { label: 'Tableau de bord de maintenance',               coeff: 1.5, ds: 'S2_TabBordDS',       ex: 'S2_TabBordEx',       tp: null },
+      { label: 'Traitement numérique du signal',               coeff: 2.5, ds: 'S2_TraitNumSigDS',   ex: 'S2_TraitNumSigEx',   tp: 'S2_TraitNumSigTP' },
+      { label: 'Micro-contrôleurs - DSP',                      coeff: 2.5, ds: 'S2_MicroDSPDS',      ex: 'S2_MicroDSPEx',      tp: 'S2_MicroDSPTP' },
+      { label: 'Instrumentations optiques',                    coeff: 2.5, ds: 'S2_InstOptDS',       ex: 'S2_InstOptEx',       tp: 'S2_InstOptTP' },
+      { label: 'Réseaux informatiques',                        coeff: 1.5, ds: 'S2_ResInfoDS',       ex: 'S2_ResInfoEx',       tp: null },
+      { label: 'Gestion de production assistée par ordinateur (GPAO)', coeff: 3, ds: 'S2_GPAODS',      ex: 'S2_GPAOEx',          tp: 'S2_GPAOTP' },
+      { label: 'Gestion de la maintenance assistée par ordinateur (GMAO)', coeff: 3, ds: 'S2_GMAODS', ex: 'S2_GMAOEx',          tp: 'S2_GMAOTP' },
+      { label: 'Anglais',                                      coeff: 1.5, ds: 'S2_AnglaisDS',       ex: 'S2_AnglaisEx',       tp: null },
+      { label: 'Arabe',                                        coeff: 1,   ds: 'S2_ArabeDS',         ex: 'S2_ArabeEx',         tp: null },
+      { label: 'Marketing',                                    coeff: 1.5, ds: 'S2_MarketingDS',     ex: 'S2_MarketingEx',     tp: null },
+      { label: 'Projet Personnel Professionnel',               coeff: 2,   ds: null,                ex: null,                  tp: 'S2_ProjetTP' },
+    ]},
+  ]
+},
 };
