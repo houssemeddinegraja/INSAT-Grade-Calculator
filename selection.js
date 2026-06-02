@@ -8,7 +8,7 @@ const updateSelection = () => {
       <option value="none">Select Field</option>
       <option value="MPI">MPI</option>
       <option value="CBA">CBA</option>`;
-  } else if (['2','3','4','5'].includes(year)) {
+  } else if (year === '2') {
     fieldSel.innerHTML = `
       <option value="none">Select Field</option>
       <option value="GL">GL</option>
@@ -17,6 +17,13 @@ const updateSelection = () => {
       <option value="IIA">IIA</option>
       <option value="CH">CH</option>
       <option value="BIO">BIO</option>`;
+  } else if (['3','4'].includes(year)) {
+    fieldSel.innerHTML = `
+      <option value="none">Select Field</option>
+      <option value="GL">GL</option>
+      <option value="RT">RT</option>
+      <option value="IMI">IMI</option>
+      <option value="IIA">IIA</option>`;
   } else {
     fieldSel.innerHTML = `<option value="none">Select Year First</option>`;
   }
