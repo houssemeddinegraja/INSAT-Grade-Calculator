@@ -299,5 +299,42 @@ const PROGRAMS = {
     ]},
   ]
 },
-
+'RT3': {
+  label: 'RT3', year: '3', field: 'RT',
+  semesters: [
+    { label: 'Semester 1', subjects: [
+      { label: 'Optimisation non linéaire',                 coeff: 2,   ds: 'S1_OptimNonLinDS',   ex: 'S1_OptimNonLinEx',   tp: null },
+      { label: 'Analyse numérique matricielle',             coeff: 1.5, ds: null,                 ex: 'S1_AnaNumMatEx',     tp: 'S1_AnaNumMatTP' },
+      { label: 'Statistiques pour l\'ingénieur',           coeff: 2,   ds: 'S1_StatsIngDS',       ex: 'S1_StatsIngEx',       tp: null },
+      { label: 'UNIX : Administration système et réseau',  coeff: 3,   ds: null,                 ex: 'S1_UnixAdmEx',        tp: 'S1_UnixAdmTP' },
+      { label: 'Analyse et Conception des Logiciels',      coeff: 3,   ds: 'S1_ACLDS',           ex: 'S1_ACLEx',            tp: 'S1_ACLTP' },
+      { label: 'Smart Device',                             coeff: 2.5, ds: 'S1_SmartDevDS',      ex: 'S1_SmartDevEx',       tp: 'S1_SmartDevTP' },
+      { label: 'Circuit RF',                               coeff: 2.5, ds: 'S1_CircRFDS',        ex: 'S1_CircRFEx',         tp: 'S1_CircRFTP' },
+      { label: 'Introduction aux systèmes de transmission numériques', coeff: 2.5, ds: 'S1_SysTransNumDS', ex: 'S1_SysTransNumEx', tp: 'S1_SysTransNumTP' },
+      { label: 'Réseaux IP',                               coeff: 2.5, ds: 'S1_ResIPDS',         ex: 'S1_ResIPEx',          tp: 'S1_ResIPTP' },
+      { label: 'Réseaux locaux sans fil',                  coeff: 2.5, ds: 'S1_ResLocalDS',      ex: 'S1_ResLocalEx',       tp: 'S1_ResLocalTP' },
+      { label: 'Anglais',                                  coeff: 1.5, ds: 'S1_AnglaisDS',       ex: 'S1_AnglaisEx',        tp: null },
+      { label: 'Arabe',                                    coeff: 1,   ds: 'S1_ArabeDS',         ex: 'S1_ArabeEx',          tp: null },
+      { label: 'Français',                                 coeff: 1.5, ds: null,                ex: 'S1_FrancaisEx',       tp: null },
+      { label: 'Théorie des organisations',                coeff: 1,   ds: 'S1_TheoOrgDS',       ex: 'S1_TheoOrgEx',        tp: null },
+      { label: 'Communication dans l\'entreprise',         coeff: 1,   ds: null,                ex: 'S1_CommEntEx',        tp: null },
+    ]},
+    { label: 'Semester 2', subjects: [
+      { label: 'Recherche Opérationnelle et théorie des graphes', coeff: 2.5, ds: 'S2_RechercheOpDS', ex: 'S2_RechercheOpEx', tp: 'S2_RechercheOpTP' },
+      { label: 'Analyse des données',                      coeff: 2.5, ds: 'S2_AnalyseDonneesDS', ex: 'S2_AnalyseDonneesEx', tp: 'S2_AnalyseDonneesTP' },
+      { label: 'Processus stochastiques et files d\'attente', coeff: 2, ds: 'S2_ProcessStochDS', ex: 'S2_ProcessStochEx', tp: null },
+      { label: 'Logique formelle',                         coeff: 2,   ds: 'S2_LogiqueFormDS',    ex: 'S2_LogiqueFormEx',    tp: null },
+      { label: 'Administration de bases de données',       coeff: 2.5, ds: 'S2_AdminBDDS',       ex: 'S2_AdminBDEx',        tp: 'S2_AdminBDTP' },
+      { label: 'Technologies de développement Java EE',    coeff: 2.5, ds: 'S2_JavaEEDS',        ex: 'S2_JavaEEEx',         tp: 'S2_JavaEETP' },
+      { label: 'Signaux et systèmes',                      coeff: 2.5, ds: 'S2_SignauxSysDS',    ex: 'S2_SignauxSysEx',     tp: 'S2_SignauxSysTP' },
+      { label: 'Réseaux radio-mobiles cellulaires',        coeff: 2,   ds: 'S2_ResRadioDS',      ex: 'S2_ResRadioEx',       tp: null },
+      { label: 'Administration et surveillance des réseaux', coeff: 2.5, ds: 'S2_AdminResDS',    ex: 'S2_AdminResEx',       tp: 'S2_AdminResTP' },
+      { label: 'Sécurité des réseaux',                     coeff: 2.5, ds: 'S2_SecuriteResDS',   ex: 'S2_SecuriteResEx',    tp: 'S2_SecuriteResTP' },
+      { label: 'Ingénierie des protocoles',                coeff: 1.5, ds: 'S2_IngProtoDS',      ex: 'S2_IngProtoEx',       tp: null },
+      { label: 'Anglais',                                  coeff: 1.5, ds: 'S2_AnglaisDS',       ex: 'S2_AnglaisEx',        tp: null },
+      { label: 'Marketing',                                coeff: 1.5, ds: 'S2_MarketingDS',     ex: 'S2_MarketingEx',      tp: null },
+      { label: 'Projet Personnel Professionnel',           coeff: 2,   ds: null,                ex: null,                  tp: 'S2_ProjetTP' },
+    ]},
+  ]
+}
 };
