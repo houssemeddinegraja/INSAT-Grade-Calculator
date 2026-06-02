@@ -336,5 +336,41 @@ const PROGRAMS = {
       { label: 'Projet Personnel Professionnel',           coeff: 2,   ds: null,                ex: null,                  tp: 'S2_ProjetTP' },
     ]},
   ]
-}
+},
+  'IIA3': {
+  label: 'IIA3', year: '3', field: 'IIA',
+  semesters: [
+    { label: 'Semester 1', subjects: [
+      { label: 'Mathématiques de l\'ingénieur',            coeff: 2,   ds: 'S1_MathIngDS',      ex: 'S1_MathIngEx',      tp: null },
+      { label: 'Analyse numérique',                        coeff: 3,   ds: 'S1_AnaNumDS',       ex: 'S1_AnaNumEx',       tp: 'S1_AnaNumTP' },
+      { label: 'Automatique échantillonnée',               coeff: 2.5, ds: 'S1_AutoEchDS',      ex: 'S1_AutoEchEx',      tp: 'S1_AutoEchTP' },
+      { label: 'Traitement numérique du signal',           coeff: 2.5, ds: 'S1_TraitNumSigDS',  ex: 'S1_TraitNumSigEx',  tp: 'S1_TraitNumSigTP' },
+      { label: 'Transmission de données',                  coeff: 2.5, ds: 'S1_TransDonneesDS', ex: 'S1_TransDonneesEx', tp: 'S1_TransDonneesTP' },
+      { label: 'Fonctions électroniques',                  coeff: 2.5, ds: 'S1_FonctElecDS',    ex: 'S1_FonctElecEx',    tp: 'S1_FonctElecTP' },
+      { label: 'Résistance des Matériaux (RDM)',           coeff: 3,   ds: 'S1_RDMDS',          ex: 'S1_RDMEx',          tp: 'S1_RDMTP' },
+      { label: 'Installations fluidiques et thermiques',   coeff: 3,   ds: 'S1_InstFluidDS',    ex: 'S1_InstFluidEx',    tp: 'S1_InstFluidTP' },
+      { label: 'Convertisseurs statiques',                 coeff: 3,   ds: 'S1_ConvStatDS',     ex: 'S1_ConvStatEx',     tp: 'S1_ConvStatTP' },
+      { label: 'Anglais',                                  coeff: 1.5, ds: 'S1_AnglaisDS',      ex: 'S1_AnglaisEx',      tp: null },
+      { label: 'Arabe',                                    coeff: 1,   ds: 'S1_ArabeDS',        ex: 'S1_ArabeEx',        tp: null },
+      { label: 'Français',                                 coeff: 1.5, ds: null,               ex: null,                tp: 'S1_FrancaisTP' },   // only TP (no DS, no exam in S1)
+      { label: 'Théorie des organisations',                coeff: 1,   ds: 'S1_TheoOrgDS',      ex: 'S1_TheoOrgEx',      tp: null },
+      { label: 'Communication dans l\'entreprise',         coeff: 1,   ds: null,               ex: 'S1_CommEntEx',      tp: null },               // only exam (no DS)
+    ]},
+    { label: 'Semester 2', subjects: [
+      { label: 'Recherche opérationnelle et Optimisation', coeff: 2.5, ds: 'S2_RechercheOpDS',  ex: 'S2_RechercheOpEx',  tp: 'S2_RechercheOpTP' },
+      { label: 'Conception des systèmes mécaniques',       coeff: 2.5, ds: null,               ex: 'S2_ConcepSysMecEx', tp: 'S2_ConcepSysMecTP' }, // no DS, exam+TP
+      { label: 'Management de la qualité et Performance industrielle', coeff: 2.5, ds: 'S2_ManagementQualDS', ex: 'S2_ManagementQualEx', tp: null },
+      { label: 'Régulation industrielle',                  coeff: 2.5, ds: 'S2_RegulIndusDS',   ex: 'S2_RegulIndusEx',   tp: 'S2_RegulIndusTP' },
+      { label: 'Modélisation Identification et Estimation', coeff: 2.5, ds: 'S2_ModelIdentDS',   ex: 'S2_ModelIdentEx',   tp: 'S2_ModelIdentTP' },
+      { label: 'Automatismes industriels',                 coeff: 2.5, ds: 'S2_AutoIndusDS',    ex: 'S2_AutoIndusEx',    tp: 'S2_AutoIndusTP' },
+      { label: 'Technologie d\'acquisition, commande et interfaçage', coeff: 2.5, ds: 'S2_TechAcqDS', ex: 'S2_TechAcqEx', tp: 'S2_TechAcqTP' },
+      { label: 'Architecture avancée des processeurs',     coeff: 2.5, ds: 'S2_ArchProcDS',     ex: 'S2_ArchProcEx',     tp: 'S2_ArchProcTP' },
+      { label: 'Bases de données',                         coeff: 2.5, ds: 'S2_BDDDS',          ex: 'S2_BDDEx',          tp: 'S2_BDDTP' },
+      { label: 'Programmation C/C++',                      coeff: 2.5, ds: null,               ex: 'S2_CPPEx',          tp: 'S2_CPPTP' },        // only exam+TP (no DS)
+      { label: 'Anglais',                                  coeff: 1.5, ds: 'S2_AnglaisDS',      ex: 'S2_AnglaisEx',      tp: null },
+      { label: 'Marketing',                                coeff: 1.5, ds: 'S2_MarketingDS',    ex: 'S2_MarketingEx',    tp: null },
+      { label: 'Projet Personnel Professionnel',           coeff: 2,   ds: null,               ex: null,                 tp: 'S2_ProjetTP' },     // only TP
+    ]},
+  ]
+},
 };
