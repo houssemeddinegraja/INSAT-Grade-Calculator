@@ -545,11 +545,11 @@ const PROGRAMS = {
       { label: 'Anglais',                                     coeff: 1.5, ds: 'S2_AnglaisDS',        ex: 'S2_AnglaisEx',        tp: null },
       { label: 'Gestion des ressources humaines (GRH)',       coeff: 1.5, ds: 'S2_GRHDS',            ex: 'S2_GRHEx',            tp: null },
       { label: 'Management de projets',                       coeff: 1.5, ds: null,                  ex: 'S2_ManagementProjetEx', tp: null },
-      { label: 'Projet Personnel Professionnel',              coeff: 4,   ds: null,                  ex: null,                  tp: 'S2_ProjetTP' },
       // Options
       { label: 'Option Matière 1',        coeff: 2.5, ds: 'S2_Option1DS',             ex: 'S2_Option1Ex',             tp: 'S2_Option1TP' },
       { label: 'Option Matière 2',  coeff: 2.5, ds: 'S2_Option2DS',           ex: 'S2_Option2Ex',           tp: 'S2_Option2TP' },
-    ]},
+      { label: 'Projet Personnel Professionnel',              coeff: 4,   ds: null,                  ex: null,                  tp: 'S2_ProjetTP' },
+      ]},
   ]
 }
 };
