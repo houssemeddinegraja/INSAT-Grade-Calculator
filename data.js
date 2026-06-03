@@ -516,4 +516,40 @@ const PROGRAMS = {
     ]},
   ]
 },
+  'IMI4': {
+  label: 'IMI4', year: '4', field: 'IMI',
+  semesters: [
+    { label: 'Semester 1', subjects: [
+      { label: 'Connaissance et surveillance des installations thermiques et fluidique', coeff: 2.5, ds: 'S1_ConnaissInstThermDS', ex: 'S1_ConnaissInstThermEx', tp: 'S1_ConnaissInstThermTP' },
+      { label: 'Sûreté de fonctionnement',                    coeff: 2,   ds: 'S1_SureteFoncDS',      ex: 'S1_SureteFoncEx',      tp: null },
+      { label: 'Processus aléatoires et Analyse spectrale',   coeff: 2.5, ds: 'S1_ProcessAleatDS',    ex: 'S1_ProcessAleatEx',    tp: 'S1_ProcessAleatTP' },
+      { label: 'Automatique des systèmes continus et échantillonnés', coeff: 2.5, ds: 'S1_AutoSysContDS', ex: 'S1_AutoSysContEx', tp: 'S1_AutoSysContTP' },
+      { label: 'Transmissions de données',                    coeff: 2.5, ds: 'S1_TransDonneesDS',   ex: 'S1_TransDonneesEx',   tp: 'S1_TransDonneesTP' },
+      { label: 'Réseaux locaux industriels et Réseaux de capteurs', coeff: 2.5, ds: 'S1_ResLocIndusDS', ex: 'S1_ResLocIndusEx', tp: 'S1_ResLocIndusTP' },
+      { label: 'Conception des chaînes instrumentales',       coeff: 2.5, ds: 'S1_ConcepChainesDS',  ex: 'S1_ConcepChainesEx',  tp: 'S1_ConcepChainesTP' },
+      { label: 'Recherche opérationnelle',                    coeff: 2.5, ds: 'S1_RechercheOpDS',    ex: 'S1_RechercheOpEx',    tp: 'S1_RechercheOpTP' },
+      { label: 'Management environnemental',                  coeff: 2.5, ds: 'S1_ManagementEnvDS',   ex: 'S1_ManagementEnvEx',   tp: null },
+      { label: 'Outils et Moyens de contrôle de la qualité',  coeff: 2,   ds: 'S1_OutilsQualiteDS',   ex: 'S1_OutilsQualiteEx',   tp: null },
+      { label: 'Anglais',                                     coeff: 1.5, ds: 'S1_AnglaisDS',        ex: 'S1_AnglaisEx',        tp: null },
+      { label: 'Communication Interpersonnelle',              coeff: 1.5, ds: null,                  ex: 'S1_CommInterEx',      tp: null },
+      { label: 'Gestion financière',                          coeff: 1.5, ds: 'S1_GestionFinDS',     ex: 'S1_GestionFinEx',     tp: null },
+      { label: 'Droit des affaires',                          coeff: 1.5, ds: 'S1_DroitAffairesDS',  ex: 'S1_DroitAffairesEx',  tp: null },
+    ]},
+    { label: 'Semester 2', subjects: [
+      { label: 'CFAO des systèmes Mécaniques',                coeff: 2.5, ds: 'S2_CFAODS',           ex: 'S2_CFAOEx',           tp: 'S2_CFAOTP' },
+      { label: 'Mécanique des milieux continus (MMC)',        coeff: 2.5, ds: 'S2_MMCDS',            ex: 'S2_MMCEx',            tp: null },
+      { label: 'Sciences des matériaux',                      coeff: 2.5, ds: 'S2_SciMatDS',         ex: 'S2_SciMatEx',         tp: 'S2_SciMatTP' },
+      { label: 'CEM et Sécurité des installations',           coeff: 2.5, ds: 'S2_CEMSecurDS',       ex: 'S2_CEMSecurEx',       tp: 'S2_CEMSecurTP' },
+      { label: 'Commande des machines',                       coeff: 2.5, ds: 'S2_CommandeMachDS',   ex: 'S2_CommandeMachEx',   tp: 'S2_CommandeMachTP' },
+      { label: 'Informatique pour l\'instrumentation',        coeff: 2.5, ds: 'S2_InfoInstruDS',     ex: 'S2_InfoInstruEx',     tp: 'S2_InfoInstruTP' },
+      { label: 'Anglais',                                     coeff: 1.5, ds: 'S2_AnglaisDS',        ex: 'S2_AnglaisEx',        tp: null },
+      { label: 'Gestion des ressources humaines (GRH)',       coeff: 1.5, ds: 'S2_GRHDS',            ex: 'S2_GRHEx',            tp: null },
+      { label: 'Management de projets',                       coeff: 1.5, ds: null,                  ex: 'S2_ManagementProjetEx', tp: null },
+      { label: 'Projet Personnel Professionnel',              coeff: 4,   ds: null,                  ex: null,                  tp: 'S2_ProjetTP' },
+      // Options
+      { label: 'Option Matière 1',        coeff: 2.5, ds: 'S2_Option1DS',             ex: 'S2_Option1Ex',             tp: 'S2_Option1TP' },
+      { label: 'Option Matière 2',  coeff: 2.5, ds: 'S2_Option2DS',           ex: 'S2_Option2Ex',           tp: 'S2_Option2TP' },
+    ]},
+  ]
+}
 };
