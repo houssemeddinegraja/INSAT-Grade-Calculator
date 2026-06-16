@@ -9,27 +9,41 @@ body {
   background: linear-gradient(135deg, #ccc7c1 0%, #253541 100%);
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   padding: 2rem 1rem;
 }
 
 .app-container {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1550px;
 }
 
 /* Header */
 .main-header {
-  text-align: center;
+  text-align: left;
   margin-bottom: 2rem;
   color: #1e293b;
+  display: flex;
+  align-items: center;    
+  justify-content: flex-start; 
+  gap: 20px;  
 }
+
+
 .header-icon {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-  height: 150px;
+  display: block;
+  height: 150px;          
   width: 150px;
+  margin-right: 4rem;          
 }
+
+.header-label {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+}
+
+
 .main-header h1 {   
   font-size: 2.5rem;
   font-weight: 700;
@@ -157,7 +171,10 @@ select:focus {
   border-radius: 20px;
   padding: 1.8rem 2rem;
   margin-bottom: 1.8rem;
+  margin-right: 1.8rem;
   box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  display: inline-block;
+  width: 47%;
 }
 .semester-card h2 {
   font-size: 1.4rem;

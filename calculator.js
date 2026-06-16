@@ -74,11 +74,10 @@ const renderProgram = (program) => {
   // Build semester cards
 const container = document.getElementById('semesters-container');
 
-// 1. Extract your semester data safely
 const sem1 = program.semesters[0];
 const sem2 = program.semesters[1];
 
-// 2. Build HTML for Semester 1 (if it exists)
+
 if (sem1) {
   container.insertAdjacentHTML('beforeend', `
     <div class="semester-card">
@@ -98,7 +97,6 @@ if (sem1) {
   `);
 }
 
-// 3. Build HTML for Semester 2 (if it exists)
 if (sem2) {
   container.insertAdjacentHTML('beforeend', `
     <div class="semester-card">
@@ -117,14 +115,14 @@ if (sem2) {
     </div>
   `);
 }
-  // Year average block
+
   container.insertAdjacentHTML('beforeend', `
     <div class="year-average">
       <div class="average-label">Year Average</div>
       <div class="average-value" id="year-average">0.00</div>
     </div>`);
 
-  // Attach listeners
+ 
   document.querySelectorAll('input[type="number"]').forEach(el => {
     el.addEventListener('input', computeAverages);
   });
