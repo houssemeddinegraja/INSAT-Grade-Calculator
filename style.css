@@ -16,8 +16,8 @@ body {
 .app-container {
   width: 100%;
   max-width: 1550px;
+  padding-right: 340px; 
 }
-
 /* Header */
 .main-header {
   text-align: left;
@@ -171,10 +171,8 @@ select:focus {
   border-radius: 20px;
   padding: 1.8rem 2rem;
   margin-bottom: 1.8rem;
-  margin-right: 1.8rem;
   box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-  display: inline-block;
-  width: 47%;
+  width: 100%; /* Takes up the exact space of its grid lane */
 }
 .semester-card h2 {
   font-size: 1.4rem;
@@ -184,7 +182,12 @@ select:focus {
   align-items: center;
   gap: 0.5rem;
 }
-
+#semesters-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 1.5rem;                    
+  align-items: start;             
+}
 /* Grade Grid */
 .grade-grid {
   display: grid;
@@ -312,9 +315,17 @@ input[type="number"]:focus {
   font-size: 0.9rem;
 }
 
-/* Responsive */
-@media (max-width: 650px) {
-  .grade-grid {
-    grid-template-columns: 1fr 80px 80px 80px;
+/* Responsive fix for smaller desktops, tablets, and mobile */
+@media (max-width: 1200px) {
+  .app-container {
+    padding-right: 0; /* Remove the safe zone when screen space is tight */
+  }
+
+  /* Un-fix the cards so they safely drop into the regular page layout instead of overlapping */
+  .average-card1, .average-card2, .year-average {
+    position: static !important;
+    width: 100% !important;
+    margin: 1.5rem 0 !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08) !important;
   }
 }
