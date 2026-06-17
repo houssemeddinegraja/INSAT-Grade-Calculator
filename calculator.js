@@ -72,36 +72,57 @@ const renderProgram = (program) => {
   fieldSel.value = program.field;
 
   // Build semester cards
-  const container = document.getElementById('semesters-container');
-  const emojis    = ['📘', '📗', '📙'];
-  const avgIds    = ['average', 'average2', 'average3'];
+const container = document.getElementById('semesters-container');
 
-  program.semesters.forEach((sem, idx) => {
-    container.insertAdjacentHTML('beforeend', `
-      <div class="semester-card">
-        <h2>${emojis[idx] ?? '📒'} ${sem.label}</h2>
-        <div class="grade-grid">
-          <div class="grade-header"></div>
-          <div class="grade-header">DS</div>
-          <div class="grade-header">Examen</div>
-          <div class="grade-header">TP</div>
-          ${sem.subjects.map(subjectRow).join('')}
-        </div>
+const sem1 = program.semesters[0];
+const sem2 = program.semesters[1];
+
+
+if (sem1) {
+  container.insertAdjacentHTML('beforeend', `
+    <div class="semester-card">
+      <h2>📘 ${sem1.label}</h2>
+      <div class="grade-grid">
+        <div class="grade-header"></div>
+        <div class="grade-header">DS</div>
+        <div class="grade-header">Examen</div>
+        <div class="grade-header">TP</div>
+        ${sem1.subjects.map(subjectRow).join('')}
       </div>
-      <div class="average-card">
-        <div class="average-label">${sem.label} Average</div>
-        <div class="average-value" id="${avgIds[idx]}">0.00</div>
-      </div>`);
-  });
+    </div>
+    <div class="average-card1 ">
+      <div class="average-label">${sem1.label} Average</div>
+      <div class="average-value" id="average">0.00</div>
+    </div>
+  `);
+}
 
-  // Year average block
+if (sem2) {
+  container.insertAdjacentHTML('beforeend', `
+    <div class="semester-card">
+      <h2>📗 ${sem2.label}</h2>
+      <div class="grade-grid">
+        <div class="grade-header"></div>
+        <div class="grade-header">DS</div>
+        <div class="grade-header">Examen</div>
+        <div class="grade-header">TP</div>
+        ${sem2.subjects.map(subjectRow).join('')}
+      </div>
+    </div>
+    <div class="average-card2">
+      <div class="average-label">${sem2.label} Average</div>
+      <div class="average-value" id="average2">0.00</div>
+    </div>
+  `);
+}
+
   container.insertAdjacentHTML('beforeend', `
     <div class="year-average">
       <div class="average-label">Year Average</div>
       <div class="average-value" id="year-average">0.00</div>
     </div>`);
 
-  // Attach listeners
+ 
   document.querySelectorAll('input[type="number"]').forEach(el => {
     el.addEventListener('input', computeAverages);
   });

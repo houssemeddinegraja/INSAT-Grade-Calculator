@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: linear-gradient(135deg, #ccc7c1 0%, #253541 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  padding: 2rem 1rem;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 600px; 
+}
+
+/* Header */
+.main-header {
+  text-align: center; 
+  margin-bottom: 2.5rem;
+  color: #1e293b;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  gap: 15px;  
+}
+
+.header-icon {
+  display: block;
+  height: 130px;          
+  width: 130px;
+}
+
+.header-label {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+}
+
+.main-header h1 {   
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  background: #7C070B;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.header-subtitle {
+  color: #475569;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* Selector Card */
+.selector-card {
+  background: rgba(46, 43, 43, 0.452);
+  border-radius: 20px;
+  padding: 2.2rem 2rem;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  margin-bottom: 2rem;
+}
+
+.selector-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.8rem;
+}
+
+.selector-header h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fcf5ed;
+}
+
+.selector-body {
+  display: flex;
+  flex-direction: column; 
+  gap: 1.5rem;
+}
+
+.select-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.select-group label {
+  font-weight: 600;
+  color: #fcf5ed;
+  font-size: 0.95rem;
+}
+
+select {
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 2px groove #926606;
+  font-size: 1rem;
+  background: #eaebee;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.2em;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s;
+}
+
+select:focus {
+  outline: none;
+  border-color: #ff0000;
+  box-shadow: 0 0 0 3px rgba(79,110,247,0.2);
+}
+
+/* Button */
+.btn-load {
+  background: #7c070b;
+  color: white;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 0.5rem;
+  transition: all 0.2s;
+  box-shadow: 0 5px 15px rgba(87, 114, 238, 0.3);
+  width: 100%; 
+  margin-top: 0.5rem;
+}
+
+.btn-load:hover {
+  background: #ac936c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(68, 100, 241, 0.4);
+}
+
+.btn-arrow {
+  font-size: 1.2rem;
+}
+
+/* Footer */
+.app-footer {
+  text-align: center;
+  color: #94a3b8;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
