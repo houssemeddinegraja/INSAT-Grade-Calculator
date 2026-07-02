@@ -73,4 +73,4 @@ Data corrections, missing programs, and UI improvements are all welcome. Open an
 
 ---
 
-*Built for INSAT students, by an INSAT student.*
+*Built for INSAT students, by INSAT students.*
